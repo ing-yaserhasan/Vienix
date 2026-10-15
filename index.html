@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vienix | Das Software-Ökosystem & Projekt-Katalog | Ing. Yaser Hasan</title>
+  <meta name="description" content="Kuratierter Projekt-Katalog und Software-Ökosystem von Ing. Yaser Hasan. Moderne Webanwendungen, Local-First-Systeme und KI-Integration.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --bg-surface: #0e1526;
+      --bg-surface-hover: #141f38;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(99, 102, 241, 0.35);
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --secondary: #06b6d4;
+      --accent-green: #10b981;
+      --accent-orange: #ea580c;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+      --font-latin: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-ar: 'Cairo', 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-latin);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(234, 88, 12, 0.08) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    body.rtl {
+      font-family: var(--font-ar);
+      direction: rtl;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(7, 10, 18, 0.82);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 16px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .brand-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      background: rgba(99, 102, 241, 0.18);
+      color: var(--primary-light);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Language Switcher Buttons */
+    .lang-switcher {
+      display: flex;
+      background: rgba(14, 21, 38, 0.85);
+      border: 1px solid var(--border-subtle);
+      border-radius: 30px;
+      padding: 3px;
+      gap: 4px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn:hover {
+      color: #fff;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+    }
+
+    .github-link-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .github-link-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 64px 0 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 30px;
+      color: var(--primary-light);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-num {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Section Title */
+    .section-header {
+      margin: 48px 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    /* Category Filters */
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-glow);
+      background: var(--bg-surface-hover);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-top {
+      margin-bottom: 18px;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .category-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-tools {
+      background: rgba(99, 102, 241, 0.16);
+      color: var(--primary-light);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .badge-web {
+      background: rgba(6, 182, 212, 0.16);
+      color: #22d3ee;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-edu {
+      background: rgba(16, 185, 129, 0.16);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-german {
+      background: rgba(234, 88, 12, 0.16);
+      color: #fb923c;
+      border: 1px solid rgba(234, 88, 12, 0.3);
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #34d399;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+    }
+
+    .card-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .card-summary {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+      min-height: 70px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #4f46e5);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+      flex: 1;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .btn-orange {
+      background: linear-gradient(135deg, var(--accent-orange), #c2410c);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+      flex: 1;
+    }
+
+    .btn-orange:hover {
+      box-shadow: 0 6px 20px rgba(234, 88, 12, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Highlight Section: Disktree */
+    .highlight-card {
+      background: linear-gradient(135deg, rgba(14, 21, 38, 0.9), rgba(20, 31, 56, 0.7));
+      border: 1px solid rgba(234, 88, 12, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--accent-orange), #f59e0b);
+    }
+
+    .highlight-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fb923c;
+      background: rgba(234, 88, 12, 0.15);
+      border: 1px solid rgba(234, 88, 12, 0.3);
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .highlight-desc {
+      color: #cbd5e1;
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 900px;
+    }
+
+    .highlight-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .h-feature {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+    }
+
+    .h-feature-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fb923c;
+      margin-bottom: 4px;
+    }
+
+    .h-feature-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(7, 10, 18, 0.95);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      color: var(--primary-light);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-actions {
+        justify-content: space-between;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .highlight-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span>🚀 Vienix</span>
+        <span class="brand-badge" id="nav-ecosystem-tag">Ökosystem</span>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-de" onclick="setLanguage('de')">
+            <span>🇩🇪</span> DE
+          </button>
+          <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">
+            <span>🇬🇧</span> EN
+          </button>
+          <button class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">
+            <span>🇸🇦</span> عربي
+          </button>
+        </div>
+
+        <!-- GitHub Profile Link -->
+        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="github-link-btn">
+          <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <span id="nav-github-label">GitHub Profil</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge" id="hero-badge-text">
+        ✨ Flaggschiff-Katalog von Ing. Yaser Hasan
+      </div>
+      <h1 class="hero-title" id="hero-title-text">
+        Das Vienix Software-Ökosystem
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle-text">
+        Eine kuratierte Sammlung intelligenter Webanwendungen, Local-First-Systeme und fortschrittlicher Open-Source-Engineering-Lösungen.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label" id="stat-flagship-label">Flaggschiff-Apps</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label" id="stat-local-label">Local-First & Privacy</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Rust / AI</span>
+          <span class="stat-label" id="stat-tech-label">High-Performance Core</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <div>
+        <h2 class="section-title" id="catalog-title">
+          <span>🗂️</span> Flaggschiff-Projekte & Anwendungen
+        </h2>
+        <p class="section-desc" id="catalog-desc">
+          Entdecken Sie die Anwendungen mit direkten Live-Demos (öffnen in separaten Fenstern).
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-pills">
+        <button class="filter-btn active" onclick="filterProjects('all', this)" id="filter-all">Alle (4)</button>
+        <button class="filter-btn" onclick="filterProjects('Tools', this)" id="filter-tools">Tools & Utilities</button>
+        <button class="filter-btn" onclick="filterProjects('Web', this)" id="filter-web">Web Dev</button>
+        <button class="filter-btn" onclick="filterProjects('Education', this)" id="filter-edu">EdTech & Sprachen</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- Project 1: Vienix Git Archive -->
+      <article class="project-card" data-category="Tools">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="category-badge badge-tools" id="cat-1">Tools & Utilities</span>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span id="status-1">Live Vercel</span>
+            </div>
+          </div>
+          <h3 class="card-title">🚀 Vienix Git Archive</h3>
+          <p class="card-summary" id="desc-1">
+            Intelligente Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und Google Sheets Synchronisation.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Gemini AI</span>
+            <span class="tech-tag">IndexedDB</span>
+            <span class="tech-tag">Google Sheets</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-1">
+            <span>Live App Starten ↗</span>
+          </a>
+          <a href="https://github.com/ing-yaserhasan/Vienix-Git-Archive" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2: Yaser Markdown -->
+      <article class="project-card" data-category="Web">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="category-badge badge-web" id="cat-2">Web Studio</span>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span id="status-2">Live Vercel</span>
+            </div>
+          </div>
+          <h3 class="card-title">📝 Yaser Markdown</h3>
+          <p class="card-summary" id="desc-2">
+            Professioneller, blitzschneller Markdown-Editor mit Echtzeit-Vorschau, erweitertem Syntax-Highlighting und 4K-Dokumentenexport für Entwickler und technische Autoren.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Markdown Engine</span>
+            <span class="tech-tag">TailwindCSS</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-2">
+            <span>Editor Starten ↗</span>
+          </a>
+          <a href="https://github.com/ing-yaserhasan/YaserMarkdown" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3: English with Vienix -->
+      <article class="project-card" data-category="Education">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="category-badge badge-edu" id="cat-3">EdTech & Education</span>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span id="status-3">Core App</span>
+            </div>
+          </div>
+          <h3 class="card-title">🎓 English with Vienix</h3>
+          <p class="card-summary" id="desc-3">
+            Interaktive Bildungsplattform zur gezielten Beherrschung des englischen Fach- und Allgemeinwortschatzes mit progressiven Modulen und Konversationsübungen.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Audio Engine</span>
+            <span class="tech-tag">Interactive UI</span>
+            <span class="tech-tag">Vienix Core</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-3">
+            <span>App Erkunden ↗</span>
+          </a>
+          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 4: Deutsch mit Vienix -->
+      <article class="project-card" data-category="Education">
+        <div class="card-top">
+          <div class="card-meta">
+            <span class="category-badge badge-german" id="cat-4">Mobile & Web Hub</span>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span id="status-4">Live Official Site</span>
+            </div>
+          </div>
+          <h3 class="card-title">🇩🇪 Deutsch mit Vienix</h3>
+          <p class="card-summary" id="desc-4">
+            Die offizielle Plattform und mobile Anwendung zum umfassenden Erlernen der deutschen Sprache mit interaktiven Lektionen, Grammatiktraining und Live-Website unter deutschmitvienix.com.
+          </p>
+          <div class="tech-tags">
+            <span class="tech-tag">Mobile App</span>
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">deutschmitvienix.com</span>
+            <span class="tech-tag">Web Platform</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="btn btn-orange" id="btn-live-4">
+            <span>Offizielle Website ↗</span>
+          </a>
+          <a href="https://github.com/ing-yaserhasan/deutsch-mit-yaser-mobile-app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Highlight Section: Disktree Development -->
+    <section class="highlight-card">
+      <div class="highlight-badge" id="h-badge">⚡ Besonderer Meilenstein & Open-Source-Erweiterung</div>
+      <h2 class="highlight-title" id="h-title">Disktree: Weiterentwickelt von Ing. Yaser Hasan</h2>
+      <p class="highlight-desc" id="h-desc">
+        Das Repository <strong>ing-yaserhasan/disktree</strong> wurde von Ing. Yaser Hasan maßgeblich mit <strong>hochprofessionellen Dienstleistungen, System-Optimierungen und erweiterten Bereinigungsfunktionen</strong> ausgestattet.
+      </p>
+
+      <div class="highlight-features">
+        <div class="h-feature">
+          <div class="h-feature-title" id="hf-1-t">⚡ Rust & GPUI Performance</div>
+          <div class="h-feature-desc" id="hf-1-d">Blitzschnelle grafische Treemap-Darstellung selbst bei Millionen von Verzeichnissen und Dateien.</div>
+        </div>
+        <div class="h-feature">
+          <div class="h-feature-title" id="hf-2-t">🛠️ Professionelle Services</div>
+          <div class="h-feature-desc" id="hf-2-d">Robuste Dienste zur sicheren Erkennung und Bereinigung großer Datenspeicher.</div>
+        </div>
+        <div class="h-feature">
+          <div class="h-feature-title" id="hf-3-t">💾 Dateisystem-Deduplizierung</div>
+          <div class="h-feature-desc" id="hf-3-d">Optimierte Handhabung unabhängiger Speichermedien und intelligentes Datenmanagement.</div>
+        </div>
+      </div>
+
+      <div>
+        <a href="https://github.com/ing-yaserhasan/disktree" target="_blank" rel="noopener noreferrer" class="btn btn-orange" id="h-btn">
+          <span>Repository auf GitHub ansehen ↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Ing. Yaser Hasan</strong> — Software Engineer & Full Stack Web Architect</p>
+      <div class="footer-links">
+        <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Vienix Git Archive</a>
+        <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="footer-link">Deutsch mit Vienix</a>
+        <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Yaser Markdown</a>
+        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Profil</a>
+      </div>
+      <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 Vienix Ecosystem • Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <!-- Multilingual & Interactive Script -->
+  <script>
+    const translations = {
+      de: {
+        dir: 'ltr',
+        ecosystemTag: 'Ökosystem',
+        githubLabel: 'GitHub Profil',
+        heroBadge: '✨ Flaggschiff-Katalog von Ing. Yaser Hasan',
+        heroTitle: 'Das Vienix Software-Ökosystem',
+        heroSubtitle: 'Eine kuratierte Sammlung intelligenter Webanwendungen, Local-First-Systeme und fortschrittlicher Open-Source-Engineering-Lösungen.',
+        statFlagship: 'Flaggschiff-Apps',
+        statLocal: 'Local-First & Privacy',
+        statTech: 'High-Performance Core',
+        catalogTitle: 'Flaggschiff-Projekte & Anwendungen',
+        catalogDesc: 'Entdecken Sie die Anwendungen mit direkten Live-Demos (öffnen in separaten Fenstern).',
+        filterAll: 'Alle (4)',
+        filterTools: 'Tools & Utilities',
+        filterWeb: 'Web Dev',
+        filterEdu: 'EdTech & Sprachen',
+        cat1: 'Tools & Utilities',
+        desc1: 'Intelligente Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und Google Sheets Synchronisation.',
+        btnLive1: 'Live App Starten ↗',
+        cat2: 'Web Studio',
+        desc2: 'Professioneller, blitzschneller Markdown-Editor mit Echtzeit-Vorschau, erweitertem Syntax-Highlighting und 4K-Dokumentenexport für Entwickler und technische Autoren.',
+        btnLive2: 'Editor Starten ↗',
+        cat3: 'EdTech & Education',
+        desc3: 'Interaktive Bildungsplattform zur gezielten Beherrschung des englischen Fach- und Allgemeinwortschatzes mit progressiven Modulen und Konversationsübungen.',
+        btnLive3: 'App Erkunden ↗',
+        cat4: 'Mobile & Web Hub',
+        desc4: 'Die offizielle Plattform und mobile Anwendung zum umfassenden Erlernen der deutschen Sprache mit interaktiven Lektionen, Grammatiktraining und Live-Website unter deutschmitvienix.com.',
+        btnLive4: 'Offizielle Website ↗',
+        hBadge: '⚡ Besonderer Meilenstein & Open-Source-Erweiterung',
+        hTitle: 'Disktree: Weiterentwickelt von Ing. Yaser Hasan',
+        hDesc: 'Das Repository ing-yaserhasan/disktree wurde von Ing. Yaser Hasan maßgeblich mit hochprofessionellen Dienstleistungen, System-Optimierungen und erweiterten Bereinigungsfunktionen ausgestattet.',
+        hf1t: '⚡ Rust & GPUI Performance',
+        hf1d: 'Blitzschnelle grafische Treemap-Darstellung selbst bei Millionen von Verzeichnissen und Dateien.',
+        hf2t: '🛠️ Professionelle Services',
+        hf2d: 'Robuste Dienste zur sicheren Erkennung und Bereinigung großer Datenspeicher.',
+        hf3t: '💾 Dateisystem-Deduplizierung',
+        hf3d: 'Optimierte Handhabung unabhängiger Speichermedien und intelligentes Datenmanagement.',
+        hBtn: 'Repository auf GitHub ansehen ↗'
+      },
+      en: {
+        dir: 'ltr',
+        ecosystemTag: 'Ecosystem',
+        githubLabel: 'GitHub Profile',
+        heroBadge: '✨ Flagship Showcase by Ing. Yaser Hasan',
+        heroTitle: 'The Vienix Software Ecosystem',
+        heroSubtitle: 'A curated showcase of intelligent web applications, Local-First architectures, and high-performance engineering solutions.',
+        statFlagship: 'Flagship Apps',
+        statLocal: 'Local-First & Privacy',
+        statTech: 'High-Performance Core',
+        catalogTitle: 'Featured Projects & Applications',
+        catalogDesc: 'Explore live web applications directly (all links open in new tabs).',
+        filterAll: 'All (4)',
+        filterTools: 'Tools & Utilities',
+        filterWeb: 'Web Dev',
+        filterEdu: 'EdTech & Languages',
+        cat1: 'Tools & Utilities',
+        desc1: 'Intelligent management platform to analyze, categorize, and archive repositories using Google Gemini AI with browser-local IndexedDB and Google Sheets cloud sync.',
+        btnLive1: 'Launch Live App ↗',
+        cat2: 'Web Studio',
+        desc2: 'High-performance, distraction-free Markdown editor offering real-time rendering, syntax highlighting, and crisp 4K exports for developers and authors.',
+        btnLive2: 'Launch Studio ↗',
+        cat3: 'EdTech & Education',
+        desc3: 'Interactive educational platform designed for practical mastery of specialized technical and general English vocabulary.',
+        btnLive3: 'Explore App ↗',
+        cat4: 'Mobile & Web Hub',
+        desc4: 'Comprehensive mobile and web platform for mastering the German language with interactive exercises, available live at deutschmitvienix.com.',
+        btnLive4: 'Official Website ↗',
+        hBadge: '⚡ Major Milestone & Open-Source Engineering',
+        hTitle: 'Disktree: Heavily Extended by Ing. Yaser Hasan',
+        hDesc: 'The ing-yaserhasan/disktree repository has been substantially developed and enhanced by Ing. Yaser Hasan with professional system services, deduplication, and deep performance optimizations.',
+        hf1t: '⚡ Rust & GPUI Performance',
+        hf1d: 'Blazing fast graphical treemap visualization handling millions of files effortlessly.',
+        hf2t: '🛠️ Professional Services',
+        hf2d: 'Production-grade inspection and cleanup services for demanding disk management.',
+        hf3t: '💾 Filesystem Deduplication',
+        hf3d: 'Smart mount isolation and advanced storage optimization algorithms.',
+        hBtn: 'View Repository on GitHub ↗'
+      },
+      ar: {
+        dir: 'rtl',
+        ecosystemTag: 'المنظومة البرمجية',
+        githubLabel: 'بروفايل GitHub',
+        heroBadge: '✨ الكتالوج المعتمد للمهندس ياسر حسن',
+        heroTitle: 'منظومة مشاريع فيينكس (Vienix)',
+        heroSubtitle: 'كتالوج واستعراض تفاعلي لأبرز التطبيقات الذكية، المعماريات المحلية أولاً (Local-First)، والحلول الهندسية المتقدمة.',
+        statFlagship: 'تطبيقات رئيسية',
+        statLocal: 'محلية أولاً وبخصوصية تامة',
+        statTech: 'أداء فائق بلغة Rust والذكاء الاصطناعي',
+        catalogTitle: 'التطبيقات والمشاريع الرئيسية',
+        catalogDesc: 'تصفح التطبيقات وجرّبها مباشرة (تفتح جميع الروابط في نوافذ مستقلة جديدة).',
+        filterAll: 'الكل (4)',
+        filterTools: 'أدوات وأنظمة',
+        filterWeb: 'تطوير الويب',
+        filterEdu: 'التعليم واللغات',
+        cat1: 'أدوات وأنظمة برمجية',
+        desc1: 'منصة وأرشيف ذكي لإدارة وفهرسة مشاريع البرمجيات بالذكاء الاصطناعي مع معمارية محلية أولاً وبطاقات بصرية ومزامنة سحابية مرنة مع Google Sheets.',
+        btnLive1: 'تشغيل المنصة حية ↗',
+        cat2: 'استوديو ويب احترافي',
+        desc2: 'محرر ماركداون احترافي فائق السرعة يدعم المعاينة اللحظية، التنسيق المتقدم، وتصدير الملفات البرمجية بدقة 4K.',
+        btnLive2: 'فتح محرر الماركداون ↗',
+        cat3: 'تطبيق ومنصة تعليمية',
+        desc3: 'منصة وتطبيق تعليمي تفاعلي لتعلم وإتقان اللغة الإنجليزية والمفردات التقنية بأسلوب تفاعلي حديث ضمن منظومة Vienix.',
+        btnLive3: 'استكشاف التطبيق ↗',
+        cat4: 'تطبيق جوال وموقع رسمي',
+        desc4: 'المنصة والتطبيق التفاعلي الرائد لتعلم وإتقان اللغة الألمانية للمستويات المختلفة بدعم الموقع الرسمي deutschmitvienix.com.',
+        btnLive4: 'زيارة الموقع الرسمي ↗',
+        hBadge: '⚡ محطة بارزة وإنجاز هندسي مفتوح المصدر',
+        hTitle: 'مشروع Disktree: تطوير متقدم للمهندس ياسر حسن',
+        hDesc: 'قام المهندس ياسر حسن بتطوير مستودع ing-yaserhasan/disktree بشكل جوهري وإضافة خدمات برمجية احترافية ومتقدمة لإدارة وتنظيف السعات التخزينية وتحسين استهلاك الموارد بدقة متناهية وسرعة فائقة بلغة Rust.',
+        hf1t: '⚡ أداء فائق بلغة Rust و GPUI',
+        hf1d: 'عرض رسومي فوري للشجرة التخزينية مهما بلغت ملايين الملفات دون أي تباطؤ.',
+        hf2t: '🛠️ خدمات برمجية احترافية',
+        hf2d: 'محركات آمنة لفحص وحذف البيانات والملفات الكبيرة بدقة وموثوقية.',
+        hf3t: '💾 إزالة التكرار ومعالجة الوسائط',
+        hf3d: 'خوارزميات ذكية لمعالجة الأقراص المنفصلة وتنظيم البيانات المتكررة.',
+        hBtn: 'مشاهدة المستودع على GitHub ↗'
+      }
+    };
+
+    function setLanguage(lang) {
+      const data = translations[lang];
+      if (!data) return;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = data.dir;
+      if (data.dir === 'rtl') {
+        document.body.classList.add('rtl');
+      } else {
+        document.body.classList.remove('rtl');
+      }
+
+      // Update active button state
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + lang);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      // Update text nodes
+      document.getElementById('nav-ecosystem-tag').textContent = data.ecosystemTag;
+      document.getElementById('nav-github-label').textContent = data.githubLabel;
+      document.getElementById('hero-badge-text').textContent = data.heroBadge;
+      document.getElementById('hero-title-text').textContent = data.heroTitle;
+      document.getElementById('hero-subtitle-text').textContent = data.heroSubtitle;
+      document.getElementById('stat-flagship-label').textContent = data.statFlagship;
+      document.getElementById('stat-local-label').textContent = data.statLocal;
+      document.getElementById('stat-tech-label').textContent = data.statTech;
+
+      document.getElementById('catalog-title').innerHTML = `<span>🗂️</span> ${data.catalogTitle}`;
+      document.getElementById('catalog-desc').textContent = data.catalogDesc;
+
+      document.getElementById('filter-all').textContent = data.filterAll;
+      document.getElementById('filter-tools').textContent = data.filterTools;
+      document.getElementById('filter-web').textContent = data.filterWeb;
+      document.getElementById('filter-edu').textContent = data.filterEdu;
+
+      document.getElementById('cat-1').textContent = data.cat1;
+      document.getElementById('desc-1').textContent = data.desc1;
+      document.getElementById('btn-live-1').innerHTML = `<span>${data.btnLive1}</span>`;
+
+      document.getElementById('cat-2').textContent = data.cat2;
+      document.getElementById('desc-2').textContent = data.desc2;
+      document.getElementById('btn-live-2').innerHTML = `<span>${data.btnLive2}</span>`;
+
+      document.getElementById('cat-3').textContent = data.cat3;
+      document.getElementById('desc-3').textContent = data.desc3;
+      document.getElementById('btn-live-3').innerHTML = `<span>${data.btnLive3}</span>`;
+
+      document.getElementById('cat-4').textContent = data.cat4;
+      document.getElementById('desc-4').textContent = data.desc4;
+      document.getElementById('btn-live-4').innerHTML = `<span>${data.btnLive4}</span>`;
+
+      document.getElementById('h-badge').textContent = data.hBadge;
+      document.getElementById('h-title').textContent = data.hTitle;
+      document.getElementById('h-desc').textContent = data.hDesc;
+      document.getElementById('hf-1-t').textContent = data.hf1t;
+      document.getElementById('hf-1-d').textContent = data.hf1d;
+      document.getElementById('hf-2-t').textContent = data.hf2t;
+      document.getElementById('hf-2-d').textContent = data.hf2d;
+      document.getElementById('hf-3-t').textContent = data.hf3t;
+      document.getElementById('hf-3-d').textContent = data.hf3d;
+      document.getElementById('h-btn').innerHTML = `<span>${data.hBtn}</span>`;
+    }
+
+    function filterProjects(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Default to German
+    setLanguage('de');
+  </script>
+</body>
+</html>
