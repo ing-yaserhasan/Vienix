@@ -1,5 +1,11 @@
+<div align="center">
+
 # 🚀 Vienix
-### Intelligent Open-Source Archive & Repository Manager | Intelligenter Open-Source Projekt-Manager
+### Das Software-Ökosystem & Der Intelligente Projekt-Katalog
+**The Intelligent Software Ecosystem & Curated Project Showcase**  
+*منظومة البرمجيات الذكية وكتالوج المشاريع المنسقة للمهندس ياسر حسن*
+
+<br/>
 
 <p align="center">
   <a href="https://vienix-git-archive.vercel.app" target="_blank">
@@ -8,11 +14,117 @@
   <img src="https://img.shields.io/badge/Architecture-Local--First-10b981?style=for-the-badge&logo=pwa&logoColor=white" alt="Local-First" />
   <img src="https://img.shields.io/badge/AI_Engine-Google_Gemini-38bdf8?style=for-the-badge&logo=google&logoColor=white" alt="Gemini" />
   <img src="https://img.shields.io/badge/Cloud_Sync-Google_Sheets-f59e0b?style=for-the-badge&logo=googlesheets&logoColor=white" alt="Sheets" />
+  <img src="https://img.shields.io/badge/Languages-DE%20%7C%20EN%20%7C%20AR-8b5cf6?style=for-the-badge" alt="Languages" />
 </p>
 
 <p align="center">
   <strong>🌐 <a href="https://vienix-git-archive.vercel.app">https://vienix-git-archive.vercel.app</a></strong>
 </p>
+
+<p align="center">
+  <a href="#-das-projekt-portfolio--katalog"><strong>[ 🗂️ Zum Projekt-Katalog ]</strong></a> &nbsp;•&nbsp;
+  <a href="#-deutsch-standard"><strong>[ 🇩🇪 Deutsch ]</strong></a> &nbsp;•&nbsp;
+  <a href="#-english"><strong>[ 🇬🇧 English ]</strong></a> &nbsp;•&nbsp;
+  <a href="#-العربية"><strong>[ 🇸🇦 العربية ]</strong></a>
+</p>
+
+</div>
+
+---
+
+## 🗂️ Das Projekt-Portfolio & Katalog | Project Catalog | كتالوج المشاريع
+
+Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-Ökosystems.  
+*Below is a curated showcase of flagship projects within the Vienix ecosystem.*  
+*فيما يلي كتالوج واستعراض تفاعلي لأبرز المشاريع الرئيسية ضمن منظومة فيينكس:*
+
+<br/>
+
+<table>
+  <thead>
+    <tr style="background-color: #0f172a; color: #f8fafc;">
+      <th align="center" width="22%"><strong>Projekt / Project</strong></th>
+      <th align="left" width="48%"><strong>Beschreibung / Description / الوصف</strong></th>
+      <th align="center" width="18%"><strong>Tech-Stack</strong></th>
+      <th align="center" width="12%"><strong>Status & Demo</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <h3>🚀 Vienix Git Archive</h3>
+        <img src="https://img.shields.io/badge/Core-Flagship-6366f1?style=flat-square" alt="Core Flagship" /><br/>
+        <sub><em>Intelligent Repository & Research Manager</em></sub>
+      </td>
+      <td>
+        <p><strong>🇩🇪 DE:</strong> Lokale (Local-First) Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und optionaler Google Sheets Synchronisation.</p>
+        <p><strong>🇬🇧 EN:</strong> Privacy-focused, local-first platform to catalog, summarize, and manage codebases with client-side Gemini AI analytics and cloud sync.</p>
+        <p><strong>🇸🇦 AR:</strong> منصة وأرشيف ذكي لإدارة وفهرسة مشاريع البرمجيات بالذكاء الاصطناعي مع معمارية محلية أولاً وبطاقات بصرية ومزامنة سحابية.</p>
+      </td>
+      <td align="center">
+        <code>Next.js</code><br/>
+        <code>React</code><br/>
+        <code>Gemini AI</code><br/>
+        <code>IndexedDB</code><br/>
+        <code>Google Sheets</code>
+      </td>
+      <td align="center">
+        <a href="https://vienix-git-archive.vercel.app" target="_blank">
+          <img src="https://img.shields.io/badge/Live_Demo-0070f3?style=for-the-badge&logo=vercel&logoColor=white" alt="Live App" />
+        </a><br/><br/>
+        <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status Active" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>📝 YaserMarkdown</h3>
+        <img src="https://img.shields.io/badge/Tool-Web_Studio-06b6d4?style=flat-square" alt="Web Studio" /><br/>
+        <sub><em>High-Performance Markdown Studio</em></sub>
+      </td>
+      <td>
+        <p><strong>🇩🇪 DE:</strong> Professioneller, blitzschneller Markdown-Editor mit Echtzeit-Vorschau, erweitertem Syntax-Highlighting und 4K-Dokumentenexport.</p>
+        <p><strong>🇬🇧 EN:</strong> High-performance, distraction-free Markdown editor offering real-time rendering, advanced styling, and ultra-crisp document exports.</p>
+        <p><strong>🇸🇦 AR:</strong> محرر ماركداون احترافي فائق السرعة يدعم المعاينة اللحظية، التنسيق المتقدم، وتصدير الملفات البرمجية بدقة 4K.</p>
+      </td>
+      <td align="center">
+        <code>Next.js</code><br/>
+        <code>React</code><br/>
+        <code>Markdown Engine</code><br/>
+        <code>TailwindCSS</code><br/>
+        <code>Vercel</code>
+      </td>
+      <td align="center">
+        <a href="https://yaser-markdown.vercel.app" target="_blank">
+          <img src="https://img.shields.io/badge/Live_Demo-0070f3?style=for-the-badge&logo=vercel&logoColor=white" alt="Live App" />
+        </a><br/><br/>
+        <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status Active" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>🎓 English-with-Vienix</h3>
+        <img src="https://img.shields.io/badge/EdTech-Platform-10b981?style=flat-square" alt="EdTech" /><br/>
+        <sub><em>Interactive Language Learning Platform</em></sub>
+      </td>
+      <td>
+        <p><strong>🇩🇪 DE:</strong> Interaktive Lernplattform zur Meisterung des englischen Fach- und Allgemeinwortschatzes mit modernen Lernmethoden und Gamification.</p>
+        <p><strong>🇬🇧 EN:</strong> Interactive educational application designed for acquiring practical communication skills and specialized technical English vocabulary.</p>
+        <p><strong>🇸🇦 AR:</strong> منصة وتطبيق تعليمي تفاعلي لتعلم وإتقان اللغة الإنجليزية والمفردات التقنية ضمن منظومة Vienix.</p>
+      </td>
+      <td align="center">
+        <code>Next.js</code><br/>
+        <code>React</code><br/>
+        <code>Audio Engine</code><br/>
+        <code>Interactive UI</code><br/>
+        <code>Vienix Core</code>
+      </td>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Private-Core_App-yellow?style=for-the-badge" alt="Private App" /><br/><br/>
+        <img src="https://img.shields.io/badge/Status-In_Development-blue?style=flat-square" alt="Status In Development" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -67,6 +179,13 @@
 
 ---
 
+## 👨‍💻 Entwickelt von / Created by
+**Ing. Yaser Hasan**  
+*Software Engineer & Full Stack Developer*  
+GitHub: [@ing-yaserhasan](https://github.com/ing-yaserhasan)
+
+---
+
 ## 📄 License & Intellectual Property
-* **Live Web Application**: Free to access and use online at [vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app).
-* **Source Code**: Proprietary & Closed Source. All Rights Reserved © 2026 Vienix.
+* **Live Web Applications**: Free to access and use online at [vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app) and [yaser-markdown.vercel.app](https://yaser-markdown.vercel.app).
+* **Source Code**: Proprietary & Closed Source. All Rights Reserved © 2026 Vienix Ecosystem.
