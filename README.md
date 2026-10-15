@@ -23,6 +23,7 @@
 
 <p align="center">
   <a href="#-das-projekt-portfolio--katalog"><strong>[ 🗂️ Zum Projekt-Katalog ]</strong></a> &nbsp;•&nbsp;
+  <a href="#-hervorgehobenes-system-tool-disktree"><strong>[ ⚡ Disktree-Entwicklung ]</strong></a> &nbsp;•&nbsp;
   <a href="#-deutsch-standard"><strong>[ 🇩🇪 Deutsch ]</strong></a> &nbsp;•&nbsp;
   <a href="#-english"><strong>[ 🇬🇧 English ]</strong></a> &nbsp;•&nbsp;
   <a href="#-العربية"><strong>[ 🇸🇦 العربية ]</strong></a>
@@ -32,11 +33,11 @@
 
 ---
 
-## 🗂️ Das Projekt-Portfolio & Katalog | Project Catalog | كتالوج المشاريع
+## 🗂️ Das Projekt-Portfolio & Katalog | Project Catalog | كتالوج المشاريع (4 Anwendungen)
 
-Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-Ökosystems.  
-*Below is a curated showcase of flagship projects within the Vienix ecosystem.*  
-*فيما يلي كتالوج واستعراض تفاعلي لأبرز المشاريع الرئيسية ضمن منظومة فيينكس:*
+Hier finden Sie die 4 Flaggschiff-Anwendungen des Vienix-Ökosystems.  
+*Below is the curated showcase of the 4 flagship applications within the Vienix ecosystem.*  
+*فيما يلي كتالوج واستعراض تفاعلي للتطبيقات الأربعة الرئيسية ضمن منظومة فيينكس:*
 
 <br/>
 
@@ -44,9 +45,9 @@ Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-�
   <thead>
     <tr style="background-color: #0f172a; color: #f8fafc;">
       <th align="center" width="22%"><strong>Projekt / Project</strong></th>
-      <th align="left" width="48%"><strong>Beschreibung / Description / الوصف</strong></th>
+      <th align="left" width="46%"><strong>Beschreibung / Description / الوصف</strong></th>
       <th align="center" width="18%"><strong>Tech-Stack</strong></th>
-      <th align="center" width="12%"><strong>Status & Demo</strong></th>
+      <th align="center" width="14%"><strong>Status & Demo</strong></th>
     </tr>
   </thead>
   <tbody>
@@ -57,7 +58,7 @@ Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-�
         <sub><em>Intelligent Repository & Research Manager</em></sub>
       </td>
       <td>
-        <p><strong>🇩🇪 DE:</strong> Lokale (Local-First) Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und optionaler Google Sheets Synchronisation.</p>
+        <p><strong>🇩🇪 DE:</strong> Lokale (Local-First) Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und Google Sheets Synchronisation.</p>
         <p><strong>🇬🇧 EN:</strong> Privacy-focused, local-first platform to catalog, summarize, and manage codebases with client-side Gemini AI analytics and cloud sync.</p>
         <p><strong>🇸🇦 AR:</strong> منصة وأرشيف ذكي لإدارة وفهرسة مشاريع البرمجيات بالذكاء الاصطناعي مع معمارية محلية أولاً وبطاقات بصرية ومزامنة سحابية.</p>
       </td>
@@ -77,7 +78,7 @@ Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-�
     </tr>
     <tr>
       <td align="center">
-        <h3>📝 YaserMarkdown</h3>
+        <h3>📝 Yaser Markdown</h3>
         <img src="https://img.shields.io/badge/Tool-Web_Studio-06b6d4?style=flat-square" alt="Web Studio" /><br/>
         <sub><em>High-Performance Markdown Studio</em></sub>
       </td>
@@ -102,12 +103,12 @@ Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-�
     </tr>
     <tr>
       <td align="center">
-        <h3>🎓 English-with-Vienix</h3>
+        <h3>🎓 English with Vienix</h3>
         <img src="https://img.shields.io/badge/EdTech-Platform-10b981?style=flat-square" alt="EdTech" /><br/>
         <sub><em>Interactive Language Learning Platform</em></sub>
       </td>
       <td>
-        <p><strong>🇩🇪 DE:</strong> Interaktive Lernplattform zur Meisterung des englischen Fach- und Allgemeinwortschatzes mit modernen Lernmethoden und Gamification.</p>
+        <p><strong>🇩🇪 DE:</strong> Interaktive Lernplattform zur Meisterung des englischen Fach- und Allgemeinwortschatzes mit modernen Lernmethoden.</p>
         <p><strong>🇬🇧 EN:</strong> Interactive educational application designed for acquiring practical communication skills and specialized technical English vocabulary.</p>
         <p><strong>🇸🇦 AR:</strong> منصة وتطبيق تعليمي تفاعلي لتعلم وإتقان اللغة الإنجليزية والمفردات التقنية ضمن منظومة Vienix.</p>
       </td>
@@ -120,11 +121,52 @@ Hier finden Sie eine kuratierte Übersicht der Flaggschiff-Projekte des Vienix-�
       </td>
       <td align="center">
         <img src="https://img.shields.io/badge/Private-Core_App-yellow?style=for-the-badge" alt="Private App" /><br/><br/>
-        <img src="https://img.shields.io/badge/Status-In_Development-blue?style=flat-square" alt="Status In Development" />
+        <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" alt="Status Active" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3>🇩🇪 Deutsch mit Vienix</h3>
+        <img src="https://img.shields.io/badge/EdTech-Mobile_%26_Web-ea580c?style=flat-square" alt="Mobile and Web" /><br/>
+        <sub><em>Comprehensive German Learning Hub</em></sub>
+      </td>
+      <td>
+        <p><strong>🇩🇪 DE:</strong> Die offizielle Plattform und mobile Applikation zur Beherrschung der deutschen Sprache für Alltag und Beruf, erreichbar unter deutschmitvienix.com.</p>
+        <p><strong>🇬🇧 EN:</strong> The comprehensive mobile application and platform dedicated to German language learning, available live at deutschmitvienix.com.</p>
+        <p><strong>🇸🇦 AR:</strong> المنصة والتطبيق التفاعلي لتعلم وإتقان اللغة الألمانية للمستويات المختلفة بدعم الموقع الرسمي deutschmitvienix.com.</p>
+      </td>
+      <td align="center">
+        <code>Mobile App</code><br/>
+        <code>React / Native</code><br/>
+        <code>Web Platform</code><br/>
+        <code>Interactive Audio</code>
+      </td>
+      <td align="center">
+        <a href="https://www.deutschmitvienix.com/" target="_blank">
+          <img src="https://img.shields.io/badge/Official_Site-ea580c?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Official Website" />
+        </a><br/><br/>
+        <a href="https://github.com/ing-yaserhasan/deutsch-mit-yaser-mobile-app" target="_blank">
+          <img src="https://img.shields.io/badge/Repo-GitHub-181717?style=flat-square&logo=github" alt="GitHub Repo" />
+        </a>
       </td>
     </tr>
   </tbody>
 </table>
+
+---
+
+## ⚡ Hervorgehobenes System-Tool: Disktree (Erweitert von Ing. Yaser Hasan)
+### 🛠️ Advanced Open-Source Contribution & High-Performance Engineering
+
+> 🌟 **Besonderer Meilenstein & Technische Erweiterung**:  
+> Das Repository **[ing-yaserhasan/disktree](https://github.com/ing-yaserhasan/disktree)** wurde von **Ing. Yaser Hasan** maßgeblich weiterentwickelt und mit **hochprofessionellen Dienstleistungen, System-Optimierungen und erweiterten Funktionen** ausgestattet.
+
+* **Repository**: [https://github.com/ing-yaserhasan/disktree](https://github.com/ing-yaserhasan/disktree)
+* **Technologie-Basis**: `Rust`, `GPUI`, High-Performance Filesystem Treemap Engine.
+* **Beitrag von Ing. Yaser Hasan**:
+  * 🇩🇪 **Deutsch**: Umfassende funktionale Erweiterung des Treemap-Systems zur blitzschnellen Speicheranalyse, Implementierung professioneller Bereinigungs- und Deduplizierungs-Services sowie Optimierung für moderne Desktop- und Systemumgebungen.
+  * 🇬🇧 **English**: Significantly engineered and extended with production-grade filesystem management services, smart deduplication mechanisms, and ultra-responsive disk inspection pipelines.
+  * 🇸🇦 **العربية**: تطوير شامل ومتفوق لمستودع Disktree وإضافة خدمات برمجية احترافية ومتقدمة لإدارة وفحص السعات التخزينية وتحسين استهلاك الموارد بدقة متناهية وسرعة فائقة بلغة Rust.
 
 ---
 
@@ -187,5 +229,5 @@ GitHub: [@ing-yaserhasan](https://github.com/ing-yaserhasan)
 ---
 
 ## 📄 License & Intellectual Property
-* **Live Web Applications**: Free to access and use online at [vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app) and [yaser-markdown.vercel.app](https://yaser-markdown.vercel.app).
+* **Live Web Applications**: Free to access and use online at [vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app), [yaser-markdown.vercel.app](https://yaser-markdown.vercel.app), and [deutschmitvienix.com](https://www.deutschmitvienix.com/).
 * **Source Code**: Proprietary & Closed Source. All Rights Reserved © 2026 Vienix Ecosystem.
