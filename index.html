@@ -3,97 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vienix | Das Software-Ökosystem & Projekt-Katalog | Ing. Yaser Hasan</title>
-  <meta name="description" content="Kuratierter Projekt-Katalog und Software-Ökosystem von Ing. Yaser Hasan. Moderne Webanwendungen, Local-First-Systeme und KI-Integration.">
+  <title>Vienix | Software Architecture & Project Showcase | Ing. Yaser Hasan</title>
+  <meta name="description" content="Flagship software portfolio and engineering showcase by Ing. Yaser Hasan. Modern web architectures, local-first platforms, and systems tooling.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* =========================================================
-       THEME VARIABLES: DARK MODE (DEFAULT)
+       CSS VARIABLES: DARK MODE (DEFAULT)
        ========================================================= */
     :root, [data-theme="dark"] {
-      --bg-dark: #070a12;
-      --bg-surface: #0e1526;
-      --bg-surface-hover: #141f38;
+      --bg-base: #060911;
+      --bg-surface: rgba(14, 21, 38, 0.72);
+      --bg-surface-solid: #0c1220;
+      --bg-surface-hover: rgba(20, 31, 56, 0.85);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(99, 102, 241, 0.35);
+      --border-accent: rgba(99, 102, 241, 0.4);
       --primary: #6366f1;
       --primary-light: #818cf8;
       --secondary: #06b6d4;
-      --accent-green: #10b981;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
       --accent-orange: #ea580c;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --radius-lg: 18px;
+      --text-dim: #64748b;
+      --grid-line: rgba(255, 255, 255, 0.025);
+
+      --radius-xl: 20px;
+      --radius-lg: 14px;
       --radius-md: 10px;
       --radius-sm: 6px;
-      --font-latin: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-ar: 'Cairo', 'Outfit', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
 
-      /* Dynamic Theme Specifics */
-      --nav-bg: rgba(7, 10, 18, 0.85);
-      --nav-border: rgba(255, 255, 255, 0.08);
-      --hero-title-grad: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
-      --card-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
-      --card-shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.6);
-      --card-border-hover: rgba(99, 102, 241, 0.45);
-      --tech-tag-bg: rgba(255, 255, 255, 0.04);
-      --tech-tag-border: rgba(255, 255, 255, 0.08);
-      --tech-tag-color: #cbd5e1;
-      --highlight-bg: linear-gradient(135deg, rgba(14, 21, 38, 0.92), rgba(20, 31, 56, 0.75));
-      --highlight-feature-bg: rgba(0, 0, 0, 0.3);
-      --highlight-text: #cbd5e1;
+      --nav-bg: rgba(6, 9, 17, 0.82);
+      --hero-title-grad: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      --card-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      --card-shadow-hover: 0 24px 50px -10px rgba(0, 0, 0, 0.7);
+      --highlight-bg: linear-gradient(135deg, rgba(14, 21, 38, 0.95), rgba(24, 18, 30, 0.85));
       --highlight-border: rgba(234, 88, 12, 0.35);
-      --footer-bg: rgba(7, 10, 18, 0.95);
-      --theme-btn-bg: rgba(255, 255, 255, 0.06);
-      --theme-btn-border: rgba(255, 255, 255, 0.12);
-      --theme-btn-color: #f8fafc;
-      --orb-opacity: 0.35;
+      --code-bg: rgba(0, 0, 0, 0.45);
+      --code-border: rgba(255, 255, 255, 0.06);
+      --orb-opacity: 0.28;
       --orb-blend: screen;
+      --footer-bg: rgba(6, 9, 17, 0.95);
     }
 
     /* =========================================================
-       THEME VARIABLES: LIGHT / DAY MODE (VIBRANT & LIVELY)
+       CSS VARIABLES: LIGHT MODE (VIBRANT & LIVELY DAYTIME)
        ========================================================= */
     [data-theme="light"] {
-      --bg-dark: #f0f4ff;
+      --bg-base: #f8faff;
       --bg-surface: rgba(255, 255, 255, 0.88);
+      --bg-surface-solid: #ffffff;
       --bg-surface-hover: #ffffff;
       --border-subtle: rgba(99, 102, 241, 0.12);
-      --border-glow: rgba(99, 102, 241, 0.4);
+      --border-accent: rgba(99, 102, 241, 0.4);
       --primary: #4f46e5;
       --primary-light: #6366f1;
       --secondary: #0284c7;
-      --accent-green: #059669;
+      --accent-emerald: #059669;
+      --accent-amber: #d97706;
       --accent-orange: #ea580c;
       --text-main: #0f172a;
       --text-muted: #475569;
+      --text-dim: #64748b;
+      --grid-line: rgba(99, 102, 241, 0.04);
 
-      /* Dynamic Theme Specifics */
       --nav-bg: rgba(255, 255, 255, 0.88);
-      --nav-border: rgba(99, 102, 241, 0.12);
-      --hero-title-grad: linear-gradient(135deg, #1e1b4b 0%, #4338ca 45%, #0284c7 100%);
-      --card-shadow: 0 16px 32px -8px rgba(99, 102, 241, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
-      --card-shadow-hover: 0 24px 48px -10px rgba(99, 102, 241, 0.22), 0 8px 20px rgba(0, 0, 0, 0.06);
-      --card-border-hover: rgba(99, 102, 241, 0.4);
-      --tech-tag-bg: rgba(99, 102, 241, 0.06);
-      --tech-tag-border: rgba(99, 102, 241, 0.15);
-      --tech-tag-color: #334155;
+      --hero-title-grad: linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #0284c7 100%);
+      --card-shadow: 0 16px 32px -8px rgba(99, 102, 241, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
+      --card-shadow-hover: 0 24px 50px -10px rgba(99, 102, 241, 0.22), 0 8px 20px rgba(0, 0, 0, 0.06);
       --highlight-bg: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fef3c7 100%);
-      --highlight-feature-bg: rgba(255, 255, 255, 0.85);
-      --highlight-text: #334155;
       --highlight-border: rgba(234, 88, 12, 0.3);
-      --footer-bg: rgba(241, 245, 249, 0.98);
-      --theme-btn-bg: rgba(99, 102, 241, 0.08);
-      --theme-btn-border: rgba(99, 102, 241, 0.2);
-      --theme-btn-color: #1e1b4b;
+      --code-bg: rgba(255, 255, 255, 0.95);
+      --code-border: rgba(99, 102, 241, 0.15);
       --orb-opacity: 0.65;
       --orb-blend: multiply;
+      --footer-bg: rgba(241, 245, 249, 0.98);
     }
 
     * {
@@ -103,14 +95,18 @@
     }
 
     body {
-      background-color: var(--bg-dark);
+      background-color: var(--bg-base);
       color: var(--text-main);
-      font-family: var(--font-latin);
+      font-family: var(--font-sans);
       min-height: 100vh;
       line-height: 1.6;
       overflow-x: hidden;
       position: relative;
       transition: background-color 0.35s ease, color 0.35s ease;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
 
     body.rtl {
@@ -123,9 +119,7 @@
       color: inherit;
     }
 
-    /* =========================================================
-       ANIMATED LIVELY BACKGROUND AMBIENT ORBS
-       ========================================================= */
+    /* Ambient Animated Atmosphere */
     .ambient-bg {
       position: fixed;
       top: 0;
@@ -140,80 +134,64 @@
     .ambient-orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(90px);
       opacity: var(--orb-opacity);
       mix-blend-mode: var(--orb-blend);
       transition: opacity 0.5s ease;
-      animation: floatMotion 22s infinite alternate ease-in-out;
+      animation: ambientFloat 24s infinite alternate ease-in-out;
     }
 
-    .orb-1 {
+    .orb-primary {
       width: 550px;
       height: 550px;
       top: -120px;
       left: -80px;
-      background: radial-gradient(circle, #6366f1 0%, rgba(99, 102, 241, 0) 70%);
-      animation-duration: 24s;
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
     }
 
-    .orb-2 {
+    .orb-secondary {
       width: 500px;
       height: 500px;
-      top: 15%;
+      top: 20%;
       right: -100px;
-      background: radial-gradient(circle, #06b6d4 0%, rgba(6, 182, 212, 0) 70%);
+      background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
       animation-duration: 28s;
-      animation-delay: -5s;
+      animation-delay: -6s;
     }
 
-    .orb-3 {
+    .orb-accent {
       width: 600px;
       height: 600px;
       bottom: -150px;
-      left: 25%;
-      background: radial-gradient(circle, #ea580c 0%, rgba(234, 88, 12, 0) 70%);
+      left: 30%;
+      background: radial-gradient(circle, var(--accent-orange) 0%, transparent 70%);
       animation-duration: 32s;
-      animation-delay: -10s;
+      animation-delay: -12s;
     }
 
-    .orb-4 {
-      width: 450px;
-      height: 450px;
-      bottom: 20%;
-      right: 15%;
-      background: radial-gradient(circle, #10b981 0%, rgba(16, 185, 129, 0) 70%);
-      animation-duration: 26s;
-      animation-delay: -15s;
+    @keyframes ambientFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(35px, -30px) scale(1.06); }
+      100% { transform: translate(-30px, 20px) scale(0.96); }
     }
 
-    @keyframes floatMotion {
-      0% {
-        transform: translate(0, 0) scale(1);
-      }
-      50% {
-        transform: translate(40px, -35px) scale(1.08);
-      }
-      100% {
-        transform: translate(-30px, 25px) scale(0.95);
-      }
-    }
-
-    /* Container */
     .container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* Navbar */
+    /* =========================================================
+       NAVBAR
+       ========================================================= */
     .navbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       background: var(--nav-bg);
-      border-bottom: 1px solid var(--nav-border);
+      border-bottom: 1px solid var(--border-subtle);
       padding: 14px 0;
       transition: background 0.35s ease, border-color 0.35s ease;
     }
@@ -225,98 +203,115 @@
       gap: 16px;
     }
 
-    .brand {
+    .brand-wrap {
       display: flex;
       align-items: center;
       gap: 12px;
+    }
+
+    .brand-logo-svg {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
       font-weight: 800;
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       letter-spacing: -0.5px;
       color: var(--text-main);
     }
 
-    .brand-badge {
+    .brand-tag {
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 3px 8px;
+      padding: 2px 8px;
       border-radius: var(--radius-sm);
-      background: rgba(99, 102, 241, 0.15);
+      background: rgba(99, 102, 241, 0.12);
       color: var(--primary);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      border: 1px solid rgba(99, 102, 241, 0.25);
       letter-spacing: 0.5px;
     }
 
-    .nav-actions {
+    .nav-controls {
       display: flex;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
     }
 
-    /* Theme Switcher Toggle Button */
-    .theme-toggle-btn {
-      background: var(--theme-btn-bg);
-      border: 1px solid var(--theme-btn-border);
-      color: var(--theme-btn-color);
-      padding: 7px 14px;
-      border-radius: 30px;
-      font-size: 0.84rem;
-      font-weight: 700;
+    /* Precision Theme Switcher */
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 7px 12px;
+      border-radius: 24px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      gap: 7px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
     }
 
-    .theme-toggle-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+    .theme-toggle:hover {
       border-color: var(--primary);
+      transform: translateY(-1px);
     }
 
-    /* Language Switcher Buttons */
-    .lang-switcher {
+    .theme-icon-svg {
+      width: 15px;
+      height: 15px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      transition: transform 0.4s ease;
+    }
+
+    /* Typographic Language Switcher (Segmented Control) */
+    .lang-segmented {
       display: flex;
-      background: var(--theme-btn-bg);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-subtle);
-      border-radius: 30px;
+      border-radius: 24px;
       padding: 3px;
-      gap: 3px;
+      gap: 2px;
     }
 
-    .lang-btn {
+    .lang-pill {
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 6px 12px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.82rem;
-      font-weight: 600;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
       cursor: pointer;
       transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 5px;
     }
 
-    .lang-btn:hover {
+    .lang-pill:hover {
       color: var(--text-main);
     }
 
-    .lang-btn.active {
+    .lang-pill.active {
       background: var(--primary);
-      color: #fff;
-      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(99, 102, 241, 0.35);
     }
 
-    .github-link-btn {
+    .nav-btn-github {
       display: flex;
       align-items: center;
-      gap: 8px;
-      background: var(--theme-btn-bg);
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-subtle);
       color: var(--text-main);
       padding: 7px 14px;
@@ -326,36 +321,48 @@
       transition: all 0.2s ease;
     }
 
-    .github-link-btn:hover {
+    .nav-btn-github:hover {
       border-color: var(--primary);
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* =========================================================
+       HERO
+       ========================================================= */
     .hero {
-      padding: 64px 0 36px;
+      padding: 72px 0 44px;
       text-align: center;
+      position: relative;
     }
 
-    .hero-badge {
+    .hero-badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 18px;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 6px 16px;
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
       border-radius: 30px;
       color: var(--primary);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
     }
 
     .hero-title {
-      font-size: 3rem;
+      font-size: 3.25rem;
       font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
+      letter-spacing: -1.2px;
+      margin-bottom: 18px;
       line-height: 1.15;
       background: var(--hero-title-grad);
       -webkit-background-clip: text;
@@ -364,44 +371,48 @@
     }
 
     .hero-subtitle {
-      font-size: 1.18rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      max-width: 780px;
-      margin: 0 auto 32px;
-      line-height: 1.6;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
     }
 
-    .hero-stats {
+    .hero-metrics {
       display: flex;
       justify-content: center;
-      gap: 36px;
+      gap: 40px;
       flex-wrap: wrap;
-      margin-top: 24px;
+      margin-top: 10px;
     }
 
-    .stat-item {
+    .metric-box {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .stat-num {
-      font-size: 1.75rem;
+    .metric-value {
+      font-size: 1.85rem;
       font-weight: 800;
+      letter-spacing: -0.5px;
       color: var(--text-main);
     }
 
-    .stat-label {
-      font-size: 0.8rem;
+    .metric-label {
+      font-size: 0.78rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.6px;
       font-weight: 600;
+      margin-top: 2px;
     }
 
-    /* Section Header */
-    .section-header {
-      margin: 48px 0 28px;
+    /* =========================================================
+       SECTION CONTROLS & BENTO GRID
+       ========================================================= */
+    .section-head {
+      margin: 56px 0 28px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -409,30 +420,40 @@
       gap: 16px;
     }
 
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+    .section-title-wrap {
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .section-icon-svg {
+      width: 22px;
+      height: 22px;
+      stroke-width: 2;
+      stroke: var(--primary);
+      fill: none;
+    }
+
+    .section-heading {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.6px;
       color: var(--text-main);
     }
 
-    .section-desc {
+    .section-subtext {
       color: var(--text-muted);
       font-size: 0.95rem;
       margin-top: 4px;
     }
 
-    /* Category Filters */
-    .filter-pills {
+    .filter-tabs {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
-    .filter-btn {
+    .filter-tab {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       color: var(--text-muted);
@@ -444,25 +465,26 @@
       transition: all 0.2s;
     }
 
-    .filter-btn:hover, .filter-btn.active {
-      background: rgba(99, 102, 241, 0.16);
+    .filter-tab:hover, .filter-tab.active {
+      background: rgba(99, 102, 241, 0.12);
       border-color: var(--primary);
       color: var(--primary);
     }
 
-    /* Projects Grid */
-    .projects-grid {
+    /* Bento Grid */
+    .bento-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      grid-template-columns: repeat(12, 1fr);
       gap: 24px;
       margin-bottom: 60px;
     }
 
-    .project-card {
+    /* Bento Cards */
+    .bento-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 30px;
+      border-radius: var(--radius-xl);
+      padding: 32px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -470,45 +492,58 @@
       position: relative;
       overflow: hidden;
       box-shadow: var(--card-shadow);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }
 
-    .project-card::before {
+    .bento-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
+      height: 3px;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
-    .project-card:hover {
+    .bento-card:hover {
       transform: translateY(-5px);
-      border-color: var(--card-border-hover);
+      border-color: var(--border-accent);
       background: var(--bg-surface-hover);
       box-shadow: var(--card-shadow-hover);
     }
 
-    .project-card:hover::before {
+    .bento-card:hover::before {
       opacity: 1;
     }
 
-    .card-top {
-      margin-bottom: 18px;
+    /* Bento Sizing */
+    .bento-card-hero {
+      grid-column: span 7;
     }
 
-    .card-meta {
+    .bento-card-side {
+      grid-column: span 5;
+    }
+
+    .bento-card-half {
+      grid-column: span 6;
+    }
+
+    .card-top {
+      margin-bottom: 20px;
+    }
+
+    .card-header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
 
-    .category-badge {
+    .card-category-pill {
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -517,74 +552,118 @@
       letter-spacing: 0.5px;
     }
 
-    .badge-tools {
-      background: rgba(99, 102, 241, 0.15);
+    .cat-tools {
+      background: rgba(99, 102, 241, 0.12);
       color: var(--primary);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      border: 1px solid rgba(99, 102, 241, 0.25);
     }
 
-    .badge-web {
-      background: rgba(6, 182, 212, 0.15);
+    .cat-web {
+      background: rgba(6, 182, 212, 0.12);
       color: var(--secondary);
-      border: 1px solid rgba(6, 182, 212, 0.3);
+      border: 1px solid rgba(6, 182, 212, 0.25);
     }
 
-    .badge-edu {
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--accent-green);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+    .cat-edu {
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.25);
     }
 
-    .badge-german {
-      background: rgba(234, 88, 12, 0.15);
+    .cat-german {
+      background: rgba(234, 88, 12, 0.12);
       color: var(--accent-orange);
-      border: 1px solid rgba(234, 88, 12, 0.3);
+      border: 1px solid rgba(234, 88, 12, 0.25);
     }
 
-    .status-indicator {
+    .live-status {
       display: flex;
       align-items: center;
       gap: 6px;
       font-size: 0.75rem;
       font-weight: 700;
-      color: var(--accent-green);
+      color: var(--accent-emerald);
     }
 
-    .status-dot {
-      width: 8px;
-      height: 8px;
+    .live-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: var(--accent-green);
-      box-shadow: 0 0 8px var(--accent-green);
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
     }
 
-    .card-title {
-      font-size: 1.48rem;
+    .card-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .project-glyph-svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      stroke-width: 2;
+      stroke: var(--primary);
+      fill: none;
+    }
+
+    .card-title-text {
+      font-size: 1.55rem;
       font-weight: 800;
       color: var(--text-main);
-      margin-bottom: 10px;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.4px;
     }
 
-    .card-summary {
+    .card-desc {
       color: var(--text-muted);
-      font-size: 0.93rem;
+      font-size: 0.95rem;
       line-height: 1.6;
-      margin-bottom: 22px;
-      min-height: 72px;
-    }
-
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
       margin-bottom: 24px;
     }
 
-    .tech-tag {
-      background: var(--tech-tag-bg);
-      border: 1px solid var(--tech-tag-border);
-      color: var(--tech-tag-color);
+    /* Interactive Preview Box in Hero Card */
+    .preview-box {
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .preview-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .preview-key {
+      color: var(--text-dim);
+    }
+
+    .preview-val {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    .tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 26px;
+    }
+
+    .tag-item {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
       font-size: 0.74rem;
       font-family: var(--font-mono);
       font-weight: 600;
@@ -592,68 +671,88 @@
       border-radius: var(--radius-sm);
     }
 
-    .card-actions {
+    [data-theme="light"] .tag-item {
+      background: rgba(99, 102, 241, 0.06);
+      border-color: rgba(99, 102, 241, 0.14);
+      color: #334155;
+    }
+
+    .card-buttons {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
     }
 
-    .btn {
+    .action-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 7px;
       padding: 10px 18px;
       border-radius: var(--radius-md);
       font-size: 0.88rem;
       font-weight: 700;
       transition: all 0.2s ease;
       cursor: pointer;
-      text-decoration: none;
     }
 
-    .btn-primary {
+    .btn-solid-primary {
       background: linear-gradient(135deg, var(--primary), #4338ca);
-      color: #fff;
+      color: #ffffff;
       box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
       flex: 1;
     }
 
-    .btn-primary:hover {
+    .btn-solid-primary:hover {
       box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
       transform: translateY(-2px);
     }
 
-    .btn-secondary {
-      background: var(--tech-tag-bg);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-main);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(99, 102, 241, 0.12);
-      border-color: var(--primary);
-      transform: translateY(-2px);
-    }
-
-    .btn-orange {
+    .btn-solid-orange {
       background: linear-gradient(135deg, var(--accent-orange), #c2410c);
-      color: #fff;
+      color: #ffffff;
       box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
       flex: 1;
     }
 
-    .btn-orange:hover {
+    .btn-solid-orange:hover {
       box-shadow: 0 6px 20px rgba(234, 88, 12, 0.5);
       transform: translateY(-2px);
     }
 
-    /* Highlight Section: Disktree */
-    .highlight-card {
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: rgba(99, 102, 241, 0.1);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .arrow-icon-svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2.2;
+      stroke: currentColor;
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+
+    .action-btn:hover .arrow-icon-svg {
+      transform: translate(2px, -2px);
+    }
+
+    /* =========================================================
+       DISKTREE HIGHLIGHT SECTION
+       ========================================================= */
+    .highlight-bento {
       background: var(--highlight-bg);
       border: 1px solid var(--highlight-border);
-      border-radius: var(--radius-lg);
-      padding: 38px;
+      border-radius: var(--radius-xl);
+      padding: 40px;
       margin-bottom: 60px;
       position: relative;
       overflow: hidden;
@@ -661,169 +760,199 @@
       transition: all 0.35s ease;
     }
 
-    .highlight-card::before {
+    .highlight-bento::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 5px;
+      width: 4px;
       height: 100%;
-      background: linear-gradient(180deg, var(--accent-orange), #f59e0b);
+      background: linear-gradient(180deg, var(--accent-orange), var(--accent-amber));
     }
 
-    .highlight-badge {
+    .highlight-top-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
+      gap: 7px;
+      font-size: 0.74rem;
       font-weight: 800;
-      color: #ea580c;
-      background: rgba(234, 88, 12, 0.15);
-      border: 1px solid rgba(234, 88, 12, 0.3);
-      padding: 4px 14px;
+      color: var(--accent-orange);
+      background: rgba(234, 88, 12, 0.12);
+      border: 1px solid rgba(234, 88, 12, 0.25);
+      padding: 4px 12px;
       border-radius: 20px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 14px;
     }
 
-    .highlight-title {
-      font-size: 1.85rem;
+    .highlight-heading {
+      font-size: 2rem;
       font-weight: 800;
       color: var(--text-main);
       margin-bottom: 12px;
+      letter-spacing: -0.6px;
     }
 
-    .highlight-desc {
-      color: var(--highlight-text);
+    .highlight-summary {
+      color: var(--text-muted);
       font-size: 1.02rem;
       line-height: 1.65;
-      margin-bottom: 26px;
-      max-width: 920px;
+      margin-bottom: 28px;
+      max-width: 950px;
     }
 
-    .highlight-features {
+    [data-theme="light"] .highlight-summary {
+      color: #334155;
+    }
+
+    .highlight-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
-    .h-feature {
-      background: var(--highlight-feature-bg);
+    .h-box {
+      background: rgba(0, 0, 0, 0.25);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       padding: 16px 18px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    .h-feature-title {
-      font-size: 0.95rem;
+    [data-theme="light"] .h-box {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: rgba(234, 88, 12, 0.15);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .h-box-title {
+      font-size: 0.96rem;
       font-weight: 800;
-      color: #ea580c;
+      color: var(--accent-orange);
       margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
     }
 
-    .h-feature-desc {
-      font-size: 0.85rem;
+    .h-box-desc {
+      font-size: 0.86rem;
       color: var(--text-muted);
       line-height: 1.5;
     }
 
-    /* Footer */
+    /* =========================================================
+       FOOTER
+       ========================================================= */
     footer {
       border-top: 1px solid var(--border-subtle);
       background: var(--footer-bg);
-      padding: 42px 0;
+      padding: 44px 0;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       transition: background 0.35s ease;
     }
 
-    .footer-links {
+    .footer-links-row {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       margin: 16px 0;
       flex-wrap: wrap;
     }
 
-    .footer-link {
+    .footer-url {
       color: var(--primary);
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 4px;
+      transition: color 0.2s ease;
     }
 
-    .footer-link:hover {
+    .footer-url:hover {
       color: var(--text-main);
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .bento-card-hero, .bento-card-side, .bento-card-half {
+        grid-column: span 12;
+      }
       .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
       }
       .nav-inner {
         flex-direction: column;
         align-items: stretch;
       }
-      .nav-actions {
+      .nav-controls {
         justify-content: space-between;
-      }
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      .highlight-card {
-        padding: 24px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Animated Glowing Orbs Background -->
+  <!-- Precision Ambient Glow Background -->
   <div class="ambient-bg">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
-    <div class="ambient-orb orb-4"></div>
+    <div class="ambient-orb orb-primary"></div>
+    <div class="ambient-orb orb-secondary"></div>
+    <div class="ambient-orb orb-accent"></div>
   </div>
 
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-inner">
-      <div class="brand">
-        <span>🚀 Vienix</span>
-        <span class="brand-badge" id="nav-ecosystem-tag">Ökosystem</span>
+      <div class="brand-wrap">
+        <!-- Minimalist High-End Geometric Vienix Logo (Vector SVG) -->
+        <div class="brand-logo-svg">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L2 9L16 16L30 9L16 2Z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 16L16 23L30 16" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+            <path d="M2 23L16 30L30 23" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+            <defs>
+              <linearGradient id="logo-grad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366f1"/>
+                <stop offset="1" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">Vienix</span>
+        <span class="brand-tag" id="nav-ecosystem-tag">Ecosystem</span>
       </div>
 
-      <div class="nav-actions">
-        <!-- Theme Switcher (Day / Night Mode) -->
-        <button class="theme-toggle-btn" id="theme-btn" onclick="toggleTheme()" title="Tag/Nacht-Modus umschalten">
-          <span id="theme-icon">☀️</span>
+      <div class="nav-controls">
+        <!-- Precision Day / Night Toggle -->
+        <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+          <svg class="theme-icon-svg" id="theme-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
           <span id="theme-label">Tag</span>
         </button>
 
-        <!-- Language Switcher -->
-        <div class="lang-switcher">
-          <button class="lang-btn active" id="btn-de" onclick="setLanguage('de')">
-            <span>🇩🇪</span> DE
-          </button>
-          <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">
-            <span>🇬🇧</span> EN
-          </button>
-          <button class="lang-btn" id="btn-ar" onclick="setLanguage('ar')">
-            <span>🇸🇦</span> عربي
-          </button>
+        <!-- Typographic Language Switcher -->
+        <div class="lang-segmented">
+          <button class="lang-pill active" id="btn-de" onclick="setLanguage('de')">DE</button>
+          <button class="lang-pill" id="btn-en" onclick="setLanguage('en')">EN</button>
+          <button class="lang-pill" id="btn-ar" onclick="setLanguage('ar')">العربية</button>
         </div>
 
-        <!-- GitHub Profile Link -->
-        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="github-link-btn">
-          <svg height="17" width="17" viewBox="0 0 16 16" fill="currentColor">
+        <!-- GitHub Profile Button -->
+        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="nav-btn-github">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
           </svg>
-          <span id="nav-github-label">GitHub Profil</span>
+          <span id="nav-github-label">GitHub</span>
         </a>
       </div>
     </div>
@@ -832,28 +961,29 @@
   <!-- Hero Section -->
   <header class="hero">
     <div class="container">
-      <div class="hero-badge" id="hero-badge-text">
-        ✨ Flaggschiff-Katalog von Ing. Yaser Hasan
+      <div class="hero-badge-pill" id="hero-badge-text">
+        <span class="hero-pulse-dot"></span>
+        <span>Flagship Architecture by Ing. Yaser Hasan</span>
       </div>
       <h1 class="hero-title" id="hero-title-text">
         Das Vienix Software-Ökosystem
       </h1>
       <p class="hero-subtitle" id="hero-subtitle-text">
-        Eine kuratierte Sammlung intelligenter Webanwendungen, Local-First-Systeme und fortschrittlicher Open-Source-Engineering-Lösungen.
+        Kuratierte Ingenieursplattform für datenschutzorientierte Local-First-Systeme, KI-gestützte Repository-Analyse und Hochleistungswerkzeuge.
       </p>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">4</span>
-          <span class="stat-label" id="stat-flagship-label">Flaggschiff-Apps</span>
+      <div class="hero-metrics">
+        <div class="metric-box">
+          <span class="metric-value">4</span>
+          <span class="metric-label" id="stat-flagship-label">Flaggschiff-Projekte</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label" id="stat-local-label">Local-First & Privacy</span>
+        <div class="metric-box">
+          <span class="metric-value">100%</span>
+          <span class="metric-label" id="stat-local-label">Local-First & Privacy</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num">Rust / AI</span>
-          <span class="stat-label" id="stat-tech-label">High-Performance Core</span>
+        <div class="metric-box">
+          <span class="metric-value">Rust & AI</span>
+          <span class="metric-label" id="stat-tech-label">High-Performance Core</span>
         </div>
       </div>
     </div>
@@ -862,151 +992,222 @@
   <main class="container">
 
     <!-- Section Header -->
-    <div class="section-header">
+    <div class="section-head">
       <div>
-        <h2 class="section-title" id="catalog-title">
-          <span>🗂️</span> Flaggschiff-Projekte & Anwendungen
-        </h2>
-        <p class="section-desc" id="catalog-desc">
-          Entdecken Sie die Anwendungen mit direkten Live-Demos (öffnen in separaten Fenstern).
+        <div class="section-title-wrap">
+          <svg class="section-icon-svg" viewBox="0 0 24 24">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <h2 class="section-heading" id="catalog-title">Flaggschiff-Anwendungen</h2>
+        </div>
+        <p class="section-subtext" id="catalog-desc">
+          Entwickelt für höchste Performance. Alle externen Live-Demos öffnen in separaten Fenstern.
         </p>
       </div>
 
       <!-- Filters -->
-      <div class="filter-pills">
-        <button class="filter-btn active" onclick="filterProjects('all', this)" id="filter-all">Alle (4)</button>
-        <button class="filter-btn" onclick="filterProjects('Tools', this)" id="filter-tools">Tools & Utilities</button>
-        <button class="filter-btn" onclick="filterProjects('Web', this)" id="filter-web">Web Dev</button>
-        <button class="filter-btn" onclick="filterProjects('Education', this)" id="filter-edu">EdTech & Sprachen</button>
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterProjects('all', this)" id="filter-all">Alle (4)</button>
+        <button class="filter-tab" onclick="filterProjects('Tools', this)" id="filter-tools">Tools & Utilities</button>
+        <button class="filter-tab" onclick="filterProjects('Web', this)" id="filter-web">Web Dev</button>
+        <button class="filter-tab" onclick="filterProjects('Education', this)" id="filter-edu">EdTech</button>
       </div>
     </div>
 
-    <!-- Projects Grid -->
-    <div class="projects-grid" id="projects-grid">
+    <!-- Bento Grid Showcase -->
+    <div class="bento-grid" id="bento-grid">
 
-      <!-- Project 1: Vienix Git Archive -->
-      <article class="project-card" data-category="Tools">
+      <!-- Bento 1: Vienix Git Archive (Hero Card, Span 7) -->
+      <article class="bento-card bento-card-hero" data-category="Tools">
         <div class="card-top">
-          <div class="card-meta">
-            <span class="category-badge badge-tools" id="cat-1">Tools & Utilities</span>
-            <div class="status-indicator">
-              <span class="status-dot"></span>
+          <div class="card-header-bar">
+            <span class="card-category-pill cat-tools" id="cat-1">Tools & Core Platform</span>
+            <div class="live-status">
+              <span class="live-dot"></span>
               <span id="status-1">Live Vercel</span>
             </div>
           </div>
-          <h3 class="card-title">🚀 Vienix Git Archive</h3>
-          <p class="card-summary" id="desc-1">
+          <div class="card-title-row">
+            <svg class="project-glyph-svg" viewBox="0 0 24 24">
+              <line x1="6" y1="3" x2="6" y2="15"></line>
+              <circle cx="18" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M18 9a9 9 0 0 1-9 9"></path>
+            </svg>
+            <h3 class="card-title-text">Vienix Git Archive</h3>
+          </div>
+          <p class="card-desc" id="desc-1">
             Intelligente Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und Google Sheets Synchronisation.
           </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Gemini AI</span>
-            <span class="tech-tag">IndexedDB</span>
-            <span class="tech-tag">Google Sheets</span>
+
+          <!-- Interactive Architecture Preview -->
+          <div class="preview-box">
+            <div class="preview-row">
+              <span class="preview-key">Architecture:</span>
+              <span class="preview-val">Local-First (IndexedDB Client)</span>
+            </div>
+            <div class="preview-row">
+              <span class="preview-key">AI Integration:</span>
+              <span class="preview-val">Direct HTTPS to Google Gemini</span>
+            </div>
+            <div class="preview-row">
+              <span class="preview-key">Cloud Sync:</span>
+              <span class="preview-val">Google Drive & Sheets API</span>
+            </div>
+          </div>
+
+          <div class="tags-list">
+            <span class="tag-item">Next.js</span>
+            <span class="tag-item">React</span>
+            <span class="tag-item">Gemini AI</span>
+            <span class="tag-item">IndexedDB</span>
+            <span class="tag-item">Google Sheets</span>
           </div>
         </div>
-        <div class="card-actions">
-          <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-1">
-            <span>Live App Starten ↗</span>
+
+        <div class="card-buttons">
+          <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="action-btn btn-solid-primary" id="btn-live-1">
+            <span>Live App Starten</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a href="https://github.com/ing-yaserhasan/Vienix-Git-Archive" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            GitHub ↗
+          <a href="https://github.com/ing-yaserhasan/Vienix-Git-Archive" target="_blank" rel="noopener noreferrer" class="action-btn btn-outline">
+            <span>GitHub Repository</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </article>
 
-      <!-- Project 2: Yaser Markdown -->
-      <article class="project-card" data-category="Web">
+      <!-- Bento 2: Yaser Markdown (Side Card, Span 5) -->
+      <article class="bento-card bento-card-side" data-category="Web">
         <div class="card-top">
-          <div class="card-meta">
-            <span class="category-badge badge-web" id="cat-2">Web Studio</span>
-            <div class="status-indicator">
-              <span class="status-dot"></span>
+          <div class="card-header-bar">
+            <span class="card-category-pill cat-web" id="cat-2">Web Studio</span>
+            <div class="live-status">
+              <span class="live-dot"></span>
               <span id="status-2">Live Vercel</span>
             </div>
           </div>
-          <h3 class="card-title">📝 Yaser Markdown</h3>
-          <p class="card-summary" id="desc-2">
+          <div class="card-title-row">
+            <svg class="project-glyph-svg" viewBox="0 0 24 24">
+              <polyline points="4 7 4 4 20 4 20 7"></polyline>
+              <line x1="9" y1="20" x2="15" y2="20"></line>
+              <line x1="12" y1="4" x2="12" y2="20"></line>
+            </svg>
+            <h3 class="card-title-text">Yaser Markdown</h3>
+          </div>
+          <p class="card-desc" id="desc-2">
             Professioneller, blitzschneller Markdown-Editor mit Echtzeit-Vorschau, erweitertem Syntax-Highlighting und 4K-Dokumentenexport für Entwickler und technische Autoren.
           </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Markdown Engine</span>
-            <span class="tech-tag">TailwindCSS</span>
-            <span class="tech-tag">Vercel</span>
+
+          <div class="preview-box">
+            <div class="preview-row">
+              <span class="preview-key">Output:</span>
+              <span class="preview-val">Ultra-Crisp 4K Export</span>
+            </div>
+            <div class="preview-row">
+              <span class="preview-key">Latency:</span>
+              <span class="preview-val">&lt; 1ms Instant Render</span>
+            </div>
+          </div>
+
+          <div class="tags-list">
+            <span class="tag-item">Next.js</span>
+            <span class="tag-item">React</span>
+            <span class="tag-item">Markdown Engine</span>
+            <span class="tag-item">TailwindCSS</span>
           </div>
         </div>
-        <div class="card-actions">
-          <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-2">
-            <span>Editor Starten ↗</span>
+
+        <div class="card-buttons">
+          <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="action-btn btn-solid-primary" id="btn-live-2">
+            <span>Editor Starten</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a href="https://github.com/ing-yaserhasan/YaserMarkdown" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            GitHub ↗
+          <a href="https://github.com/ing-yaserhasan/YaserMarkdown" target="_blank" rel="noopener noreferrer" class="action-btn btn-outline">
+            <span>GitHub</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </article>
 
-      <!-- Project 3: English with Vienix -->
-      <article class="project-card" data-category="Education">
+      <!-- Bento 3: English with Vienix (Span 6) -->
+      <article class="bento-card bento-card-half" data-category="Education">
         <div class="card-top">
-          <div class="card-meta">
-            <span class="category-badge badge-edu" id="cat-3">EdTech & Education</span>
-            <div class="status-indicator">
-              <span class="status-dot"></span>
+          <div class="card-header-bar">
+            <span class="card-category-pill cat-edu" id="cat-3">EdTech & Education</span>
+            <div class="live-status">
+              <span class="live-dot"></span>
               <span id="status-3">Core App</span>
             </div>
           </div>
-          <h3 class="card-title">🎓 English with Vienix</h3>
-          <p class="card-summary" id="desc-3">
+          <div class="card-title-row">
+            <svg class="project-glyph-svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <h3 class="card-title-text">English with Vienix</h3>
+          </div>
+          <p class="card-desc" id="desc-3">
             Interaktive Bildungsplattform zur gezielten Beherrschung des englischen Fach- und Allgemeinwortschatzes mit progressiven Modulen und Konversationsübungen.
           </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Audio Engine</span>
-            <span class="tech-tag">Interactive UI</span>
-            <span class="tech-tag">Vienix Core</span>
+          <div class="tags-list">
+            <span class="tag-item">Next.js</span>
+            <span class="tag-item">React</span>
+            <span class="tag-item">Audio Engine</span>
+            <span class="tag-item">Interactive UI</span>
           </div>
         </div>
-        <div class="card-actions">
-          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-live-3">
-            <span>App Erkunden ↗</span>
+
+        <div class="card-buttons">
+          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="action-btn btn-solid-primary" id="btn-live-3">
+            <span>App Erkunden</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            GitHub ↗
+          <a href="https://github.com/ing-yaserhasan/English-with-Vienix" target="_blank" rel="noopener noreferrer" class="action-btn btn-outline">
+            <span>GitHub</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </article>
 
-      <!-- Project 4: Deutsch mit Vienix -->
-      <article class="project-card" data-category="Education">
+      <!-- Bento 4: Deutsch mit Vienix (Span 6) -->
+      <article class="bento-card bento-card-half" data-category="Education">
         <div class="card-top">
-          <div class="card-meta">
-            <span class="category-badge badge-german" id="cat-4">Mobile & Web Hub</span>
-            <div class="status-indicator">
-              <span class="status-dot"></span>
+          <div class="card-header-bar">
+            <span class="card-category-pill cat-german" id="cat-4">Mobile & Web Hub</span>
+            <div class="live-status">
+              <span class="live-dot"></span>
               <span id="status-4">Live Official Site</span>
             </div>
           </div>
-          <h3 class="card-title">🇩🇪 Deutsch mit Vienix</h3>
-          <p class="card-summary" id="desc-4">
+          <div class="card-title-row">
+            <svg class="project-glyph-svg" viewBox="0 0 24 24" style="stroke: var(--accent-orange);">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <h3 class="card-title-text">Deutsch mit Vienix</h3>
+          </div>
+          <p class="card-desc" id="desc-4">
             Die offizielle Plattform und mobile Anwendung zum umfassenden Erlernen der deutschen Sprache mit interaktiven Lektionen, Grammatiktraining und Live-Website unter deutschmitvienix.com.
           </p>
-          <div class="tech-tags">
-            <span class="tech-tag">Mobile App</span>
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">deutschmitvienix.com</span>
-            <span class="tech-tag">Web Platform</span>
+          <div class="tags-list">
+            <span class="tag-item">Mobile App</span>
+            <span class="tag-item">React Native</span>
+            <span class="tag-item">Web Hub</span>
+            <span class="tag-item">deutschmitvienix.com</span>
           </div>
         </div>
-        <div class="card-actions">
-          <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="btn btn-orange" id="btn-live-4">
-            <span>Offizielle Website ↗</span>
+
+        <div class="card-buttons">
+          <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="action-btn btn-solid-orange" id="btn-live-4">
+            <span>Offizielle Website</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a href="https://github.com/ing-yaserhasan/deutsch-mit-yaser-mobile-app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            GitHub ↗
+          <a href="https://github.com/ing-yaserhasan/deutsch-mit-yaser-mobile-app" target="_blank" rel="noopener noreferrer" class="action-btn btn-outline">
+            <span>GitHub</span>
+            <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </div>
       </article>
@@ -1014,31 +1215,44 @@
     </div>
 
     <!-- Highlight Section: Disktree Development -->
-    <section class="highlight-card">
-      <div class="highlight-badge" id="h-badge">⚡ Besonderer Meilenstein & Open-Source-Erweiterung</div>
-      <h2 class="highlight-title" id="h-title">Disktree: Weiterentwickelt von Ing. Yaser Hasan</h2>
-      <p class="highlight-desc" id="h-desc">
+    <section class="highlight-bento">
+      <div class="highlight-top-pill" id="h-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <span>High-Performance System Engineering</span>
+      </div>
+      <h2 class="highlight-heading" id="h-title">Disktree: Weiterentwickelt von Ing. Yaser Hasan</h2>
+      <p class="highlight-summary" id="h-desc">
         Das Repository <strong>ing-yaserhasan/disktree</strong> wurde von Ing. Yaser Hasan maßgeblich mit <strong>hochprofessionellen Dienstleistungen, System-Optimierungen und erweiterten Bereinigungsfunktionen</strong> ausgestattet.
       </p>
 
-      <div class="highlight-features">
-        <div class="h-feature">
-          <div class="h-feature-title" id="hf-1-t">⚡ Rust & GPUI Performance</div>
-          <div class="h-feature-desc" id="hf-1-d">Blitzschnelle grafische Treemap-Darstellung selbst bei Millionen von Verzeichnissen und Dateien.</div>
+      <div class="highlight-grid">
+        <div class="h-box">
+          <div class="h-box-title" id="hf-1-t">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            <span>Rust & GPUI Performance</span>
+          </div>
+          <div class="h-box-desc" id="hf-1-d">Blitzschnelle grafische Treemap-Darstellung selbst bei Millionen von Verzeichnissen und Dateien.</div>
         </div>
-        <div class="h-feature">
-          <div class="h-feature-title" id="hf-2-t">🛠️ Professionelle Services</div>
-          <div class="h-feature-desc" id="hf-2-d">Robuste Dienste zur sicheren Erkennung und Bereinigung großer Datenspeicher.</div>
+        <div class="h-box">
+          <div class="h-box-title" id="hf-2-t">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            <span>Professionelle Services</span>
+          </div>
+          <div class="h-box-desc" id="hf-2-d">Robuste Dienste zur sicheren Erkennung und Bereinigung großer Datenspeicher.</div>
         </div>
-        <div class="h-feature">
-          <div class="h-feature-title" id="hf-3-t">💾 Dateisystem-Deduplizierung</div>
-          <div class="h-feature-desc" id="hf-3-d">Optimierte Handhabung unabhängiger Speichermedien und intelligentes Datenmanagement.</div>
+        <div class="h-box">
+          <div class="h-box-title" id="hf-3-t">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <span>Dateisystem-Deduplizierung</span>
+          </div>
+          <div class="h-box-desc" id="hf-3-d">Optimierte Handhabung unabhängiger Speichermedien und intelligentes Datenmanagement.</div>
         </div>
       </div>
 
       <div>
-        <a href="https://github.com/ing-yaserhasan/disktree" target="_blank" rel="noopener noreferrer" class="btn btn-orange" id="h-btn">
-          <span>Repository auf GitHub ansehen ↗</span>
+        <a href="https://github.com/ing-yaserhasan/disktree" target="_blank" rel="noopener noreferrer" class="action-btn btn-solid-orange" id="h-btn">
+          <span>Repository auf GitHub ansehen</span>
+          <svg class="arrow-icon-svg" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
         </a>
       </div>
     </section>
@@ -1049,17 +1263,17 @@
   <footer>
     <div class="container">
       <p><strong>Ing. Yaser Hasan</strong> — Software Engineer & Full Stack Web Architect</p>
-      <div class="footer-links">
-        <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Vienix Git Archive</a>
-        <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="footer-link">Deutsch mit Vienix</a>
-        <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Yaser Markdown</a>
-        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Profil</a>
+      <div class="footer-links-row">
+        <a href="https://vienix-git-archive.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-url">Vienix Git Archive</a>
+        <a href="https://www.deutschmitvienix.com/" target="_blank" rel="noopener noreferrer" class="footer-url">Deutsch mit Vienix</a>
+        <a href="https://yaser-markdown.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-url">Yaser Markdown</a>
+        <a href="https://github.com/ing-yaserhasan" target="_blank" rel="noopener noreferrer" class="footer-url">GitHub Profil</a>
       </div>
-      <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 Vienix Ecosystem • Alle Rechte vorbehalten.</p>
+      <p style="font-size: 0.8rem; opacity: 0.65; margin-top: 8px;">© 2026 Vienix Ecosystem • Alle Rechte vorbehalten.</p>
     </div>
   </footer>
 
-  <!-- Multilingual & Theme Script -->
+  <!-- Script for Localization & Theme Engine -->
   <script>
     let currentLang = 'de';
     let currentTheme = 'dark';
@@ -1068,123 +1282,123 @@
       de: {
         dir: 'ltr',
         ecosystemTag: 'Ökosystem',
-        githubLabel: 'GitHub Profil',
-        heroBadge: '✨ Flaggschiff-Katalog von Ing. Yaser Hasan',
+        githubLabel: 'GitHub',
+        heroBadge: 'Flaggschiff-Architektur von Ing. Yaser Hasan',
         heroTitle: 'Das Vienix Software-Ökosystem',
-        heroSubtitle: 'Eine kuratierte Sammlung intelligenter Webanwendungen, Local-First-Systeme und fortschrittlicher Open-Source-Engineering-Lösungen.',
-        statFlagship: 'Flaggschiff-Apps',
+        heroSubtitle: 'Kuratierte Ingenieursplattform für datenschutzorientierte Local-First-Systeme, KI-gestützte Repository-Analyse und Hochleistungswerkzeuge.',
+        statFlagship: 'Flaggschiff-Projekte',
         statLocal: 'Local-First & Privacy',
         statTech: 'High-Performance Core',
-        catalogTitle: 'Flaggschiff-Projekte & Anwendungen',
-        catalogDesc: 'Entdecken Sie die Anwendungen mit direkten Live-Demos (öffnen in separaten Fenstern).',
+        catalogTitle: 'Flaggschiff-Anwendungen',
+        catalogDesc: 'Entwickelt für höchste Performance. Alle externen Live-Demos öffnen in separaten Fenstern.',
         filterAll: 'Alle (4)',
         filterTools: 'Tools & Utilities',
         filterWeb: 'Web Dev',
-        filterEdu: 'EdTech & Sprachen',
-        cat1: 'Tools & Utilities',
+        filterEdu: 'EdTech',
+        cat1: 'Tools & Core Platform',
         desc1: 'Intelligente Management-Plattform zur automatisierten Analyse, Archivierung und Kategorisierung von Software-Repositories mittels Google Gemini AI und Google Sheets Synchronisation.',
-        btnLive1: 'Live App Starten ↗',
+        btnLive1: 'Live App Starten',
         cat2: 'Web Studio',
         desc2: 'Professioneller, blitzschneller Markdown-Editor mit Echtzeit-Vorschau, erweitertem Syntax-Highlighting und 4K-Dokumentenexport für Entwickler und technische Autoren.',
-        btnLive2: 'Editor Starten ↗',
+        btnLive2: 'Editor Starten',
         cat3: 'EdTech & Education',
         desc3: 'Interaktive Bildungsplattform zur gezielten Beherrschung des englischen Fach- und Allgemeinwortschatzes mit progressiven Modulen und Konversationsübungen.',
-        btnLive3: 'App Erkunden ↗',
+        btnLive3: 'App Erkunden',
         cat4: 'Mobile & Web Hub',
         desc4: 'Die offizielle Plattform und mobile Anwendung zum umfassenden Erlernen der deutschen Sprache mit interaktiven Lektionen, Grammatiktraining und Live-Website unter deutschmitvienix.com.',
-        btnLive4: 'Offizielle Website ↗',
-        hBadge: '⚡ Besonderer Meilenstein & Open-Source-Erweiterung',
+        btnLive4: 'Offizielle Website',
+        hBadge: 'High-Performance System Engineering',
         hTitle: 'Disktree: Weiterentwickelt von Ing. Yaser Hasan',
         hDesc: 'Das Repository ing-yaserhasan/disktree wurde von Ing. Yaser Hasan maßgeblich mit hochprofessionellen Dienstleistungen, System-Optimierungen und erweiterten Bereinigungsfunktionen ausgestattet.',
-        hf1t: '⚡ Rust & GPUI Performance',
+        hf1t: 'Rust & GPUI Performance',
         hf1d: 'Blitzschnelle grafische Treemap-Darstellung selbst bei Millionen von Verzeichnissen und Dateien.',
-        hf2t: '🛠️ Professionelle Services',
+        hf2t: 'Professionelle Services',
         hf2d: 'Robuste Dienste zur sicheren Erkennung und Bereinigung großer Datenspeicher.',
-        hf3t: '💾 Dateisystem-Deduplizierung',
+        hf3t: 'Dateisystem-Deduplizierung',
         hf3d: 'Optimierte Handhabung unabhängiger Speichermedien und intelligentes Datenmanagement.',
-        hBtn: 'Repository auf GitHub ansehen ↗',
+        hBtn: 'Repository auf GitHub ansehen',
         themeLightLabel: 'Tag',
         themeDarkLabel: 'Nacht'
       },
       en: {
         dir: 'ltr',
         ecosystemTag: 'Ecosystem',
-        githubLabel: 'GitHub Profile',
-        heroBadge: '✨ Flagship Showcase by Ing. Yaser Hasan',
+        githubLabel: 'GitHub',
+        heroBadge: 'Flagship Architecture by Ing. Yaser Hasan',
         heroTitle: 'The Vienix Software Ecosystem',
-        heroSubtitle: 'A curated showcase of intelligent web applications, Local-First architectures, and high-performance engineering solutions.',
-        statFlagship: 'Flagship Apps',
+        heroSubtitle: 'A curated engineering platform showcasing privacy-focused Local-First architectures, autonomous Gemini AI analytics, and systems tooling.',
+        statFlagship: 'Flagship Projects',
         statLocal: 'Local-First & Privacy',
         statTech: 'High-Performance Core',
-        catalogTitle: 'Featured Projects & Applications',
-        catalogDesc: 'Explore live web applications directly (all links open in new tabs).',
+        catalogTitle: 'Featured Applications',
+        catalogDesc: 'Engineered for peak performance. All external live demonstrations open in separate windows.',
         filterAll: 'All (4)',
         filterTools: 'Tools & Utilities',
         filterWeb: 'Web Dev',
-        filterEdu: 'EdTech & Languages',
-        cat1: 'Tools & Utilities',
+        filterEdu: 'EdTech',
+        cat1: 'Tools & Core Platform',
         desc1: 'Intelligent management platform to analyze, categorize, and archive repositories using Google Gemini AI with browser-local IndexedDB and Google Sheets cloud sync.',
-        btnLive1: 'Launch Live App ↗',
+        btnLive1: 'Launch Live App',
         cat2: 'Web Studio',
         desc2: 'High-performance, distraction-free Markdown editor offering real-time rendering, syntax highlighting, and crisp 4K exports for developers and authors.',
-        btnLive2: 'Launch Studio ↗',
+        btnLive2: 'Launch Studio',
         cat3: 'EdTech & Education',
         desc3: 'Interactive educational platform designed for practical mastery of specialized technical and general English vocabulary.',
-        btnLive3: 'Explore App ↗',
+        btnLive3: 'Explore App',
         cat4: 'Mobile & Web Hub',
         desc4: 'Comprehensive mobile and web platform for mastering the German language with interactive exercises, available live at deutschmitvienix.com.',
-        btnLive4: 'Official Website ↗',
-        hBadge: '⚡ Major Milestone & Open-Source Engineering',
+        btnLive4: 'Official Website',
+        hBadge: 'High-Performance System Engineering',
         hTitle: 'Disktree: Heavily Extended by Ing. Yaser Hasan',
         hDesc: 'The ing-yaserhasan/disktree repository has been substantially developed and enhanced by Ing. Yaser Hasan with professional system services, deduplication, and deep performance optimizations.',
-        hf1t: '⚡ Rust & GPUI Performance',
+        hf1t: 'Rust & GPUI Performance',
         hf1d: 'Blazing fast graphical treemap visualization handling millions of files effortlessly.',
-        hf2t: '🛠️ Professional Services',
+        hf2t: 'Professional Services',
         hf2d: 'Production-grade inspection and cleanup services for demanding disk management.',
-        hf3t: '💾 Filesystem Deduplication',
+        hf3t: 'Filesystem Deduplication',
         hf3d: 'Smart mount isolation and advanced storage optimization algorithms.',
-        hBtn: 'View Repository on GitHub ↗',
+        hBtn: 'View Repository on GitHub',
         themeLightLabel: 'Light',
         themeDarkLabel: 'Dark'
       },
       ar: {
         dir: 'rtl',
         ecosystemTag: 'المنظومة البرمجية',
-        githubLabel: 'بروفايل GitHub',
-        heroBadge: '✨ الكتالوج المعتمد للمهندس ياسر حسن',
+        githubLabel: 'GitHub',
+        heroBadge: 'المعمارية المعتمدة للمهندس ياسر حسن',
         heroTitle: 'منظومة مشاريع فيينكس (Vienix)',
-        heroSubtitle: 'كتالوج واستعراض تفاعلي لأبرز التطبيقات الذكية، المعماريات المحلية أولاً (Local-First)، والحلول الهندسية المتقدمة.',
-        statFlagship: 'تطبيقات رئيسية',
+        heroSubtitle: 'منصة هندسية متطورة تستعرض تطبيقات الويب المحلية أولاً (Local-First)، تحليلات الذكاء الاصطناعي من Gemini، وحلول الأنظمة عالية الكفاءة.',
+        statFlagship: 'مشاريع رئيسية',
         statLocal: 'محلية أولاً وبخصوصية تامة',
         statTech: 'أداء فائق بلغة Rust والذكاء الاصطناعي',
         catalogTitle: 'التطبيقات والمشاريع الرئيسية',
-        catalogDesc: 'تصفح التطبيقات وجرّبها مباشرة (تفتح جميع الروابط في نوافذ مستقلة جديدة).',
+        catalogDesc: 'صُممت لأعلى درجات الكفاءة. جميع الروابط الخارجية تفتح في نوافذ مستقلة جديدة.',
         filterAll: 'الكل (4)',
         filterTools: 'أدوات وأنظمة',
         filterWeb: 'تطوير الويب',
         filterEdu: 'التعليم واللغات',
-        cat1: 'أدوات وأنظمة برمجية',
+        cat1: 'أدوات والمنصة الأساسية',
         desc1: 'منصة وأرشيف ذكي لإدارة وفهرسة مشاريع البرمجيات بالذكاء الاصطناعي مع معمارية محلية أولاً وبطاقات بصرية ومزامنة سحابية مرنة مع Google Sheets.',
-        btnLive1: 'تشغيل المنصة حية ↗',
+        btnLive1: 'تشغيل المنصة حية',
         cat2: 'استوديو ويب احترافي',
         desc2: 'محرر ماركداون احترافي فائق السرعة يدعم المعاينة اللحظية، التنسيق المتقدم، وتصدير الملفات البرمجية بدقة 4K.',
-        btnLive2: 'فتح محرر الماركداون ↗',
+        btnLive2: 'فتح محرر الماركداون',
         cat3: 'تطبيق ومنصة تعليمية',
         desc3: 'منصة وتطبيق تعليمي تفاعلي لتعلم وإتقان اللغة الإنجليزية والمفردات التقنية بأسلوب تفاعلي حديث ضمن منظومة Vienix.',
-        btnLive3: 'استكشاف التطبيق ↗',
+        btnLive3: 'استكشاف التطبيق',
         cat4: 'تطبيق جوال وموقع رسمي',
         desc4: 'المنصة والتطبيق التفاعلي الرائد لتعلم وإتقان اللغة الألمانية للمستويات المختلفة بدعم الموقع الرسمي deutschmitvienix.com.',
-        btnLive4: 'زيارة الموقع الرسمي ↗',
-        hBadge: '⚡ محطة بارزة وإنجاز هندسي مفتوح المصدر',
+        btnLive4: 'زيارة الموقع الرسمي',
+        hBadge: 'هندسة أنظمة فائقة الأداء',
         hTitle: 'مشروع Disktree: تطوير متقدم للمهندس ياسر حسن',
         hDesc: 'قام المهندس ياسر حسن بتطوير مستودع ing-yaserhasan/disktree بشكل جوهري وإضافة خدمات برمجية احترافية ومتقدمة لإدارة وتنظيف السعات التخزينية وتحسين استهلاك الموارد بدقة متناهية وسرعة فائقة بلغة Rust.',
-        hf1t: '⚡ أداء فائق بلغة Rust و GPUI',
+        hf1t: 'أداء فائق بلغة Rust و GPUI',
         hf1d: 'عرض رسومي فوري للشجرة التخزينية مهما بلغت ملايين الملفات دون أي تباطؤ.',
-        hf2t: '🛠️ خدمات برمجية احترافية',
+        hf2t: 'خدمات برمجية احترافية',
         hf2d: 'محركات آمنة لفحص وحذف البيانات والملفات الكبيرة بدقة وموثوقية.',
-        hf3t: '💾 إزالة التكرار ومعالجة الوسائط',
+        hf3t: 'إزالة التكرار ومعالجة الوسائط',
         hf3d: 'خوارزميات ذكية لمعالجة الأقراص المنفصلة وتنظيم البيانات المتكررة.',
-        hBtn: 'مشاهدة المستودع على GitHub ↗',
+        hBtn: 'مشاهدة المستودع على GitHub',
         themeLightLabel: 'نهاري',
         themeDarkLabel: 'ليلي'
       }
@@ -1197,11 +1411,21 @@
       
       if (currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
-        themeIcon.textContent = '🌙';
+        themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
         themeLabel.textContent = data.themeDarkLabel;
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
-        themeIcon.textContent = '☀️';
+        themeIcon.innerHTML = `
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        `;
         themeLabel.textContent = data.themeLightLabel;
       }
     }
@@ -1225,22 +1449,22 @@
         document.body.classList.remove('rtl');
       }
 
-      // Update active button state
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      // Update active segmented pill
+      document.querySelectorAll('.lang-pill').forEach(btn => btn.classList.remove('active'));
       const activeBtn = document.getElementById('btn-' + lang);
       if (activeBtn) activeBtn.classList.add('active');
 
       // Update text nodes
       document.getElementById('nav-ecosystem-tag').textContent = data.ecosystemTag;
       document.getElementById('nav-github-label').textContent = data.githubLabel;
-      document.getElementById('hero-badge-text').textContent = data.heroBadge;
+      document.getElementById('hero-badge-text').querySelector('span:last-child').textContent = data.heroBadge;
       document.getElementById('hero-title-text').textContent = data.heroTitle;
       document.getElementById('hero-subtitle-text').textContent = data.heroSubtitle;
       document.getElementById('stat-flagship-label').textContent = data.statFlagship;
       document.getElementById('stat-local-label').textContent = data.statLocal;
       document.getElementById('stat-tech-label').textContent = data.statTech;
 
-      document.getElementById('catalog-title').innerHTML = `<span>🗂️</span> ${data.catalogTitle}`;
+      document.getElementById('catalog-title').textContent = data.catalogTitle;
       document.getElementById('catalog-desc').textContent = data.catalogDesc;
 
       document.getElementById('filter-all').textContent = data.filterAll;
@@ -1250,39 +1474,39 @@
 
       document.getElementById('cat-1').textContent = data.cat1;
       document.getElementById('desc-1').textContent = data.desc1;
-      document.getElementById('btn-live-1').innerHTML = `<span>${data.btnLive1}</span>`;
+      document.getElementById('btn-live-1').querySelector('span').textContent = data.btnLive1;
 
       document.getElementById('cat-2').textContent = data.cat2;
       document.getElementById('desc-2').textContent = data.desc2;
-      document.getElementById('btn-live-2').innerHTML = `<span>${data.btnLive2}</span>`;
+      document.getElementById('btn-live-2').querySelector('span').textContent = data.btnLive2;
 
       document.getElementById('cat-3').textContent = data.cat3;
       document.getElementById('desc-3').textContent = data.desc3;
-      document.getElementById('btn-live-3').innerHTML = `<span>${data.btnLive3}</span>`;
+      document.getElementById('btn-live-3').querySelector('span').textContent = data.btnLive3;
 
       document.getElementById('cat-4').textContent = data.cat4;
       document.getElementById('desc-4').textContent = data.desc4;
-      document.getElementById('btn-live-4').innerHTML = `<span>${data.btnLive4}</span>`;
+      document.getElementById('btn-live-4').querySelector('span').textContent = data.btnLive4;
 
-      document.getElementById('h-badge').textContent = data.hBadge;
+      document.getElementById('h-badge').querySelector('span').textContent = data.hBadge;
       document.getElementById('h-title').textContent = data.hTitle;
-      document.getElementById('h-desc').textContent = data.hDesc;
-      document.getElementById('hf-1-t').textContent = data.hf1t;
+      document.getElementById('h-desc').innerHTML = data.hDesc;
+      document.getElementById('hf-1-t').querySelector('span').textContent = data.hf1t;
       document.getElementById('hf-1-d').textContent = data.hf1d;
-      document.getElementById('hf-2-t').textContent = data.hf2t;
+      document.getElementById('hf-2-t').querySelector('span').textContent = data.hf2t;
       document.getElementById('hf-2-d').textContent = data.hf2d;
-      document.getElementById('hf-3-t').textContent = data.hf3t;
+      document.getElementById('hf-3-t').querySelector('span').textContent = data.hf3t;
       document.getElementById('hf-3-d').textContent = data.hf3d;
-      document.getElementById('h-btn').innerHTML = `<span>${data.hBtn}</span>`;
+      document.getElementById('h-btn').querySelector('span').textContent = data.hBtn;
 
       updateThemeUI();
     }
 
     function filterProjects(category, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const cards = document.querySelectorAll('.project-card');
+      const cards = document.querySelectorAll('.bento-card');
       cards.forEach(card => {
         if (category === 'all' || card.getAttribute('data-category') === category) {
           card.style.display = 'flex';
@@ -1292,13 +1516,13 @@
       });
     }
 
-    // Initialize saved preferences
+    // Initialize theme from storage
     const savedTheme = localStorage.getItem('vienix_catalog_theme');
     if (savedTheme) {
       currentTheme = savedTheme;
     }
     
-    // Default to German
+    // Default initialize
     setLanguage('de');
   </script>
 </body>
