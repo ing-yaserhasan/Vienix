@@ -8,6 +8,9 @@
 <br/>
 
 <p align="center">
+  <a href="https://ing-yaserhasan.github.io/Vienix/" target="_blank">
+    <img src="https://img.shields.io/badge/Web_Katalog-GitHub_Pages-10b981?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages Catalog" />
+  </a>
   <a href="https://vienix-git-archive.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/Live_App-Launch_Vienix-6366f1?style=for-the-badge&logo=vercel&logoColor=white" alt="Live App" />
   </a>
@@ -18,7 +21,8 @@
 </p>
 
 <p align="center">
-  <strong>🌐 <a href="https://vienix-git-archive.vercel.app">https://vienix-git-archive.vercel.app</a></strong>
+  <strong>🌐 Web-Katalog (Interaktiv & öffnet in neuen Fenstern): <a href="https://ing-yaserhasan.github.io/Vienix/">https://ing-yaserhasan.github.io/Vienix/</a></strong><br/>
+  <strong>🚀 Platform Live: <a href="https://vienix-git-archive.vercel.app">https://vienix-git-archive.vercel.app</a></strong>
 </p>
 
 <p align="center">
