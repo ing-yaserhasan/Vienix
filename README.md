@@ -1,5 +1,5 @@
-# 🚀 Vienix (فيينكس)
-### Intelligent Open-Source Archive & Repository Manager | مدير وأرشيف المشاريع البرمجية الذكي
+# 🚀 Vienix
+### Intelligent Open-Source Archive & Repository Manager | Intelligenter Open-Source Projekt-Manager
 
 <p align="center">
   <a href="https://vienix-git-archive.vercel.app" target="_blank">
@@ -13,6 +13,40 @@
 <p align="center">
   <strong>🌐 <a href="https://vienix-git-archive.vercel.app">https://vienix-git-archive.vercel.app</a></strong>
 </p>
+
+---
+
+## 🇩🇪 Deutsch (Standard)
+
+### 📌 Projektübersicht
+**Vienix** ist eine moderne, datenschutzorientierte **Local-First**-Webanwendung, mit der Entwickler, Forscher und Teams GitHub-Repositories mithilfe von künstlicher Intelligenz (Google Gemini) strukturiert katalogisieren, zusammenfassen und verwalten können.
+
+### ✨ Hauptfunktionen:
+* 🤖 **KI-gestützte Repository-Analyse**: Automatische Extraktion von aussagekräftigen Zusammenfassungen, Technologie-Tags und Kategorien auf Knopfdruck.
+* 💬 **Interaktiver KI-Code-Assistent**: Technische Diskussionen, Code-Analysen und gezielte Fragen zur Architektur direkt in der Benutzeroberfläche.
+* 🔒 **Datenschutz & Lokale Speicherung (Local-First)**: Vollständige Speicherung aller Projektdaten und Schlüssel im Browser (IndexedDB). Direkte HTTPS-Verbindung zu offiziellen Google-Endpunkten ohne zwischengeschaltete Server.
+* ☁️ **Google Sheets Cloud-Synchronisation**: Nahtlose 1-Klick-Synchronisierung mit Google Sheets zur Datensicherung und flexiblen Tabellenverwaltung.
+* 🎨 **Visuelle Infografik-Karten**: Automatische Erstellung professioneller Projektkarten mit Exportmöglichkeit (PNG) sowie Upload benutzerdefinierter Projektbilder.
+* 📊 **Umfassendes Dashboard & Analysen**: Visuelle Auswertungen nach Themen, Technologien, meistgenutzten Tags und monatlicher Aktivität.
+
+🔗 **Online-Anwendung direkt ausführen**: [https://vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app)
+
+---
+
+## 🇬🇧 English
+
+### 📌 Overview
+**Vienix** is an intelligent, high-performance **Local-First** web platform designed to help developers, engineering teams, and researchers catalog, analyze, and organize GitHub repositories effortlessly using Google Gemini AI.
+
+### ✨ Key Features:
+* 🤖 **Autonomous AI Repository Analysis**: Instant generation of executive summaries, technological categorizations, and descriptive tags.
+* 💬 **Interactive Codebase Assistant**: Chat directly with AI about any project's architecture, dependencies, and implementation details.
+* 🔒 **Local-First & Privacy-Focused**: Your archive data and API credentials are kept locally in your browser (IndexedDB). Requests connect directly to Google's official endpoints over HTTPS without third-party proxies.
+* ☁️ **Seamless Google Sheets Cloud Sync**: 1-click automated synchronization to your personal Google Drive and Sheets with intelligent conflict detection.
+* 🎨 **Visual Infographics & Custom Media**: Automatic presentation card generation, with support for custom image uploads and web URLs.
+* 📊 **Comprehensive Analytics**: Visual breakdown of repositories by technical categories, frequently used tags, and monthly activity metrics.
+
+🔗 **Launch Live Web App**: [https://vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app)
 
 ---
 
@@ -30,40 +64,6 @@
 * 📊 **لوحة تحليلات وإحصائيات متقدمة**: رسوم بيانية وتوزيعات تفصيلية للمشاريع حسب التصنيف، الوسوم الأكثر استخداماً، والنشاط الشهري.
 
 🔗 **جرّب المنصة مباشرة الآن**: [https://vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app)
-
----
-
-## 🇬🇧 English
-
-### 📌 Overview
-**Vienix** is an intelligent, high-performance **Local-First** web platform designed to help developers, engineering teams, and open-source enthusiasts catalog, analyze, and organize GitHub repositories effortlessly using Google Gemini AI.
-
-### ✨ Key Features:
-* 🤖 **Autonomous AI Repository Analysis**: Instant generation of executive summaries, technological categorizations, and descriptive tags.
-* 💬 **Interactive Codebase Assistant**: Chat directly with AI about any project's architecture, dependencies, and implementation details.
-* 🔒 **Local-First & Privacy-Focused**: Your archive data and API credentials are kept locally in your browser (IndexedDB). Requests connect directly to Google's official endpoints over HTTPS without third-party proxies.
-* ☁️ **Seamless Google Sheets Cloud Sync**: 1-click automated synchronization to your personal Google Drive and Sheets with intelligent conflict detection.
-* 🎨 **Visual Infographics & Custom Media**: Automatic presentation card generation, with support for custom image uploads and web URLs.
-* 📊 **Comprehensive Analytics**: Visual breakdown of repositories by technical categories, frequently used tags, and monthly activity metrics.
-
-🔗 **Launch Live Web App**: [https://vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app)
-
----
-
-## 🇩🇪 Deutsch
-
-### 📌 Projektübersicht
-**Vienix** ist eine moderne, datenschutzorientierte **Local-First**-Webanwendung, mit der Entwickler und IT-Teams GitHub-Repositories mithilfe von künstlicher Intelligenz (Google Gemini) strukturiert katalogisieren, zusammenfassen und verwalten können.
-
-### ✨ Hauptfunktionen:
-* 🤖 **KI-gestützte Repository-Analyse**: Automatische Extraktion von Zusammenfassungen, Technologie-Tags und Kategorien.
-* 💬 **Interaktiver KI-Assistent**: Technische Diskussionen, Code-Analysen und Fragen direkt in der Benutzeroberfläche.
-* 🔒 **Datenschutz & Lokale Speicherung**: Vollständige Speicherung im Browser (IndexedDB) mit direkter Verbindung zu offiziellen Google-Endpunkten ohne externe Tracking-Server.
-* ☁️ **Google Sheets Cloud-Synchronisation**: 1-Klick-Synchronisierung mit Google Sheets zur Datensicherung in Echtzeit.
-* 🎨 **Visuelle Infografik-Karten**: Automatische Erstellung von Projektkarten mit Exportmöglichkeit (PNG) und benutzerdefinierten Bildern.
-* 📊 **Detailliertes Dashboard & Statistiken**: Übersichtliche Auswertungen nach Themen, Technologien und monatlichem Wachstum.
-
-🔗 **Online-Anwendung ausführen**: [https://vienix-git-archive.vercel.app](https://vienix-git-archive.vercel.app)
 
 ---
 
